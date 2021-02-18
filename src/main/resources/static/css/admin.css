@@ -43,6 +43,7 @@
 #navbarNavAltMarkup > .navbar_adjust{
     position: relative;
     left: 1060px;
+    top: 3px;
 }
 
 #navbarNavAltMarkup > .navbar-nav > li > a > .fa{
