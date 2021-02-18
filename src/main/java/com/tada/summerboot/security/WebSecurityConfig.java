@@ -40,7 +40,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 				.antMatchers("/js/**")
 				.antMatchers("/images/**")
 //				.antMatchers("/images/cakes_images/**")
-
+//				.antMatchers("/product/edit/{id}")
 				.antMatchers("/product/all")
 				.antMatchers("/register")
 				.antMatchers("/user/new")
