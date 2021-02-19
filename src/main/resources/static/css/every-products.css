@@ -4197,7 +4197,6 @@ hr{                                /*WRITE TO US, LOCATE US, SOCIAL MEDIA (UNDER
 
     /*------------------(end) adjust footer padding -----------------*/
 
-
     /*------------ Footer Button (Back to top) starts here -----------*/
 
     .container_backtotop{
@@ -4208,6 +4207,11 @@ hr{                                /*WRITE TO US, LOCATE US, SOCIAL MEDIA (UNDER
     /*------------- Footer Button (Back to top) ends here ------------*/
 }
 
+.link2page {
+    display: inline;
+    padding-right: 10px;
+    padding-left: 10px;
+}
 
 
 
@@ -4224,15 +4228,9 @@ hr{                                /*WRITE TO US, LOCATE US, SOCIAL MEDIA (UNDER
 
 /*-------------------------------(end)Media queries for navbar-----------------------------------*/
 
-.input-boxes {
-    display: inline-block;
-    float: right;
-}
 
-.input-boxes-small {
-    display: inline-block;
-    float: inherit;
-}
+/************************************Media Query (start)********************************/
+
 
 
 

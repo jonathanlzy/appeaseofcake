@@ -1,110 +1,550 @@
- /*-------------------------------------(start)NAVBAR css -----------------------------------*/
- 
- .container {                           /* container of navigation bar, bs containers are padded, need to remove them*/
+/*--------------------------------(start)FreeIslandwide css ------------------------------*/
+
+.container-fluid {                     /* container of navigation bar, bs containers are padded, need to remove them*/
     padding-right:0;
     padding-left:0;
     margin-right:auto;
     margin-left:auto;
     background-color:#f2f4f5;         /*nav background color */
-    padding-top:0px; 
- }
-
- .container_0{                           /*free deliv container */
-     background-color: #343346;
-     padding: 0px 0px;
-     /* margin-top: 7px; */
-     margin-top: 0px;
-     line-height:27px;
- }
-
- .container_nav{                    
-     /* border: 5px dotted red; */       /* nav margin-top push up whitespace */
-     margin-top: -12px;
- }
- 
-  #free_deliv_font{                      /*"Free delivery font", first row */
-     color: white;
-     font-size: 13px;
-     font-family: 'Montserrat', sans-serif;
-     text-align: center;
-     letter-spacing: 0.03em;
- }
-
-.logo_image{                             /* cake image */
-    height:47px;
-    width:53px;
-    position: relative; 
-    left: 12px;
-    bottom:1px;
+    padding-top:0px;
+    width:100%;
 }
 
-.company_logo{                           /* div that wraps around company logo and name */
-    margin-top:0;
-    margin-bottom:0;
-    margin-left:0;
-    padding:2px;
-/*  margin-left:auto;
-    margin-right:auto; */                /* if logo wants to be centered */
+.container_0{                           /*free deliv container */
+    background-color: #343346;
+    padding: 0px 0px;
+    margin-top: 0px;
+    line-height:27px;
 }
 
-.appeaseofcake_font{                     /* font "appeaseofcake" <h6> */
-    position: absolute;
-    bottom: 12px;    
-    left: 90px;
-    color:#fa2871;
-    font-size: 22px;
-    font-family: 'PT Mono', monospace;
-    letter-spacing: 3px;
+.container_nav{
+    /* border: 5px dotted red; */       /* nav margin-top push up whitespace */
+    margin-top: -12px;
 }
 
-ul > li{                                  /*remove dot from listed items*/
-    list-style-type: none;
-    
+#free_deliv_font{                      /*"Free delivery font", first row */
+    color: white;
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    letter-spacing: 0.03em;
 }
 
-ul > .navbar-item > a{                    /*change font for <li> items*/
-    color: grey;    
-    font-size: 16.3px;
-    font-family: 'PT Mono', monospace;
-    padding-right: 3px;
-    margin-left: 20px;
+/*-------------------------------------(start)NAVBAR css -----------------------------------*/
+.nav_container{
+    margin-top: -16px;
 }
 
-ul > .navbar-itemCart > a > .fa{
-    font-size: 20px !important;
-    color: grey; 
-    padding-right: 3px;
-    margin-left: 21px;
+#navbarNavAltMarkup{
+    background-color:#252B34;
+    opacity: 0.8;
 }
 
-ul > .navbar-itemCart > a > .fa:hover{
-    /* background: linear-gradient(90deg, #0700b8 0%, #00ff88 100%); */
-    /* background: linear-gradient(90deg, #d53369 0%, #daae51 100%); */
+#navbarNavAltMarkup > .navbar_adjust{
+    position: relative;
+    left: 1060px;
+    top: 10px;
+}
+
+#navbarNavAltMarkup > .navbar-nav > li > a > .fa{
+    font-size: 25px;
+    color : gray;
+}
+
+#navbarNavAltMarkup > .navbar-nav > li > a > .fa:hover{
     background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
     color:transparent;
     -webkit-background-clip: text;
-    font-size: 20px !important;
-    transform: scale(1.02);
 }
 
-body {
-    height: 100%;
-    width: 100%;
+#navbarNavAltMarkup > .navbar-nav > a{            /*change navbar links sizes*/
+    color: grey;
+    font-size: 18px;
+    font-family: 'Kumbh Sans', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
 }
 
-.modal_button{                            /*change fonts for login/register button*/
+#navbarNavAltMarkup > .navbar-nav > a:hover{
+    background-color: #f3ec78;
+    background-image: linear-gradient(45deg, orange, #d40d59, #772dcc, blue);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.nav-item1{
+    margin-top:0px;
+}
+
+.nav-item6{
+    background-color: #f3ec78;
+    background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    font-size: 18px;
+    letter-spacing: 0.06em;
+    font-family: 'Kumbh Sans', sans-serif;
+    border: none;  !important;
+    outline: none !important;
+    margin-bottom:10px;
+}
+
+.nav-item6:hover{
+    font-size: 17px;
+    background-color: #f3ec78;
+    background-image: linear-gradient(#ffA500);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    margin-bottom:10px;
+    border: none !important;
+    outline: none !important;
+}
+
+.nav-item7{
+    background-color: #f3ec78;
+    background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    font-size: 18px;
+    letter-spacing: 0.06em;
+    font-family: 'Kumbh Sans', sans-serif;
+    border: none;
+}
+
+.nav-item7:hover{
+    font-size: 17px;
+    background-color: #f3ec78;
+    background-image: linear-gradient(#ffA500);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+
+.container_nav1 > nav > .font_appease{
+    letter-spacing: 0.15em;
+    color:#fa2871;
     font-family: 'PT Mono', monospace;
-    font-size: 16px;
-    margin-left: 20px;
-    color: #3F45D7;
-    /* transition: 0.4s; */
+    font-size: 24px;
 }
 
-.modal_button:hover{
-    text-decoration: underline;
-    /* transform: scale(1.03); */
+.container_nav1 > nav > .font_appease:hover{
+    background-color: #f3ec78;
+    background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
 }
 
+
+.nav-item1, .nav-item2, .nav-item3, .nav-item4, .nav-item5, .nav-item6{
+    margin-right: 20px;
+}
+
+/*****************MEDIA QUERY NAVBAR (START)*******************/
+/******** MEDIA QUERY (MAX-WIDTH) [START] *********/
+@media screen and (min-width: 992px){
+    #navbarNavAltMarkup > .navbar_adjust{
+        position: relative;
+        left: 140px;
+    }
+
+    #navbarNavAltMarkup{
+        background-color:#f8f9fa;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > li > a > .fa{
+        font-size: 23px;
+        color : gray;
+    }
+    #navbarNavAltMarkup > .navbar-nav > a{            /*change navbar links sizes*/
+        color: grey;
+        font-size: 15px;
+        font-family: 'Kumbh Sans', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+    }
+    .container_nav1 > nav > .font_appease{              /*adjust font*/
+        letter-spacing: 0.15em;
+        color:#fa2871;
+        font-family: 'PT Mono', monospace;
+        font-size: 24px;
+    }
+    .nav-item1, .nav-item2, .nav-item3, .nav-item4, .nav-item5, .nav-item6{  /*adjust margin between a*/
+        margin-right: 8px;
+    }
+
+}
+
+
+
+@media screen and (min-width: 1050px){
+    #navbarNavAltMarkup > .navbar_adjust{
+        position: relative;
+        left: 190px;
+    }
+
+    #navbarNavAltMarkup{
+        background-color:#f8f9fa;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > li > a > .fa{
+        font-size: 23.5px;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > a{            /*change navbar links sizes*/
+        font-size: 15.5px;
+        letter-spacing: 0.08em;
+    }
+
+    .container_nav1 > nav > .font_appease{              /*adjust font*/
+        letter-spacing: 0.15em;
+        font-size: 24px;
+    }
+    .nav-item1, .nav-item2, .nav-item3, .nav-item4, .nav-item5, .nav-item6{  /*adjust margin between a*/
+        margin-right: 8px;
+    }
+}
+
+
+@media screen and (min-width: 1100px){
+    #navbarNavAltMarkup > .navbar_adjust{
+        position: relative;
+        left: 230px;
+    }
+
+    #navbarNavAltMarkup{
+        background-color:#f8f9fa;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > li > a > .fa{
+        font-size: 24px;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > a{            /*change navbar links sizes*/
+        font-size: 16px;
+        letter-spacing: 0.08em;
+    }
+
+    .container_nav1 > nav > .font_appease{              /*adjust font*/
+        letter-spacing: 0.15em;
+        font-size: 24px;
+    }
+    .nav-item1, .nav-item2, .nav-item3, .nav-item4, .nav-item5, .nav-item6{  /*adjust margin between a*/
+        margin-right: 8px;
+    }
+}
+
+
+@media screen and (min-width: 1150px){
+    #navbarNavAltMarkup > .navbar_adjust{
+        position: relative;
+        left: 280px;
+    }
+
+    #navbarNavAltMarkup{
+        background-color:#f8f9fa;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > li > a > .fa{
+        font-size: 24px;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > a{            /*change navbar links sizes*/
+        font-size: 16px;
+        letter-spacing: 0.08em;
+    }
+
+    .container_nav1 > nav > .font_appease{              /*adjust font*/
+        letter-spacing: 0.15em;
+        font-size: 24px;
+    }
+    .nav-item1, .nav-item2, .nav-item3, .nav-item4, .nav-item5, .nav-item6{  /*adjust margin between a*/
+        margin-right: 8px;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    #navbarNavAltMarkup > .navbar_adjust{
+        position: relative;
+        left: 330px;
+    }
+
+    #navbarNavAltMarkup{
+        background-color:#f8f9fa;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > li > a > .fa{
+        font-size: 24px;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > a{            /*change navbar links sizes*/
+        font-size: 16px;
+        letter-spacing: 0.08em;
+    }
+
+    .container_nav1 > nav > .font_appease{              /*adjust font*/
+        letter-spacing: 0.15em;
+        font-size: 24px;
+    }
+    .nav-item1, .nav-item2, .nav-item3, .nav-item4, .nav-item5, .nav-item6{  /*adjust margin between a*/
+        margin-right: 8px;
+    }
+}
+
+@media screen and (min-width: 1250px){
+    #navbarNavAltMarkup > .navbar_adjust{
+        position: relative;
+        left: 370px;
+    }
+
+    #navbarNavAltMarkup{
+        background-color:#f8f9fa;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > li > a > .fa{
+        font-size: 24px;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > a{            /*change navbar links sizes*/
+        font-size: 16px;
+        letter-spacing: 0.08em;
+    }
+
+    .container_nav1 > nav > .font_appease{              /*adjust font*/
+        letter-spacing: 0.15em;
+        font-size: 24px;
+    }
+    .nav-item1, .nav-item2, .nav-item3, .nav-item4, .nav-item5, .nav-item6{  /*adjust margin between a*/
+        margin-right: 8px;
+    }
+}
+
+@media screen and (min-width: 1300px){
+    #navbarNavAltMarkup > .navbar_adjust{
+        position: relative;
+        left: 420px;
+    }
+}
+
+@media screen and (min-width: 1350px){
+    #navbarNavAltMarkup > .navbar_adjust{
+        position: relative;
+        left: 480px;
+    }
+}
+
+@media screen and (min-width: 1400px){
+    #navbarNavAltMarkup > .navbar_adjust{
+        position: relative;
+        left: 530px;
+    }
+}
+
+@media screen and (min-width: 1450px){
+    #navbarNavAltMarkup > .navbar_adjust{
+        position: relative;
+        left: 580px;
+    }
+}
+
+@media screen and (min-width: 1500px){
+    #navbarNavAltMarkup > .navbar_adjust{
+        position: relative;
+        left: 620px;
+    }
+}
+
+@media screen and (min-width: 1550px){
+    #navbarNavAltMarkup > .navbar_adjust{
+        position: relative;
+        left: 670px;
+    }
+}
+
+@media screen and (min-width: 1600px){
+    #navbarNavAltMarkup > .navbar_adjust{
+        position: relative;
+        left: 720px;
+    }
+}
+
+@media screen and (min-width: 1650px){
+    #navbarNavAltMarkup > .navbar_adjust{
+        position: relative;
+        left: 770px;
+    }
+}
+
+@media screen and (min-width: 1700px){
+    #navbarNavAltMarkup > .navbar_adjust{
+        position: relative;
+        left: 850px;
+    }
+}
+
+@media screen and (min-width: 1750px){
+    #navbarNavAltMarkup > .navbar_adjust{
+        position: relative;
+        left: 930px;
+    }
+}
+
+@media screen and (min-width: 1800px){
+    #navbarNavAltMarkup > .navbar_adjust{
+        position: relative;
+        left: 800px;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > li > a > .fa{
+        font-size: 24px;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > a{            /*change navbar links sizes*/
+        font-size: 20px;
+        letter-spacing: 0.08em;
+    }
+
+    .nav-item1, .nav-item2, .nav-item3, .nav-item4, .nav-item5, .nav-item6{  /*adjust margin between a*/
+        margin-right: 18px;
+    }
+}
+/********** MEDIA QUERY (MIN-WIDTH) [END] *********/
+
+/******** MEDIA QUERY (MAX-WIDTH) [START] *********/
+
+@media screen and (max-width: 408px){
+
+    .container_nav1 > nav > .font_appease{
+        letter-spacing: 0.15em;
+        color:#fa2871;
+        font-family: 'PT Mono', monospace;
+        font-size: 24px;
+        display: none;
+    }
+
+    .nav-item1{
+        margin-top:100px;
+    }
+
+    #navbarNavAltMarkup > .navbar_adjust{
+        position: relative;
+        left: 0px;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > li > a > .fa{
+        font-size: 48px;
+        color : gray;
+        margin-bottom: 50px;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > a{
+        color: grey;
+        font-size: 30px;
+        font-family: 'Kumbh Sans', sans-serif;
+        margin-bottom: 45px;
+        text-transform: uppercase;
+    }
+
+    .nav-item6{             /*LOGOUT*/
+        font-size: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 50px;
+        margin-top: 10px;
+    }
+
+    .nav-item6:hover{      /*LOGOUT:HOVER*/
+        font-size: 28px;
+        margin-bottom: 50px;
+        margin-top: 10px;
+    }
+
+    .nav-item7{             /*LOGIN*/
+        text-align: center;
+        font-size: 30px;
+        margin-top: 10px;
+        margin-bottom: 110px;
+    }
+
+    .nav-item7:hover{       /*LOGIN:HOVER*/
+        font-size: 28px;
+        margin-top: 10px;
+        margin-bottom: 110px;
+    }
+}
+
+
+@media screen and (max-width: 991px){
+
+    .nav-item1{
+        margin-top:100px;
+    }
+
+    #navbarNavAltMarkup > .navbar_adjust{
+        position: relative;
+        left: 0px;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > li > a > .fa{
+        font-size: 48px;
+        color : gray;
+        margin-bottom: 50px;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > a{
+        color: grey;
+        font-size: 30px;
+        font-family: 'Kumbh Sans', sans-serif;
+        margin-bottom: 45px;
+        text-transform: uppercase;
+    }
+
+    .nav-item6{             /*LOGOUT*/
+        font-size: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 50px;
+        margin-top: 10px;
+    }
+
+    .nav-item6:hover{      /*LOGOUT:HOVER*/
+        font-size: 28px;
+        margin-bottom: 50px;
+        margin-top: 10px;
+    }
+
+    .nav-item7{             /*LOGIN*/
+        text-align: center;
+        font-size: 30px;
+        margin-top: 10px;
+        margin-bottom: 110px;
+    }
+
+    .nav-item7:hover{       /*LOGIN:HOVER*/
+        font-size: 28px;
+        margin-top: 10px;
+        margin-bottom: 110px;
+    }
+}
+/******** MEDIA QUERY (MAX-WIDTH) [END] ***********/
+/*****************MEDIA QUERY NAVBAR (END)*******************/
 /*-------------------------------------(end)NAVBAR css ----------------------------------*/
 
 /*--------------------------------------(start)carousel css-------------------------------*/

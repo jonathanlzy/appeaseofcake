@@ -32,62 +32,64 @@
     <!--load all styles -->
 
     <!-- stylesheet main_page -->
-    <link rel="stylesheet" type="text/css" href="css/addproduct.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="/css/addproduct.css" media="screen"/>
 
     <title>APPEASEOFCAKE</title>
 
 </head>
 
 <body>
+<div th:insert="admin.html :: header"></div>
+
 
 <!-- <header> -->
 <!-------------------------------------------------- Free Delivery (starts) here -------------------------------------------------->
-<div class="container-fluid container_0">
-    <p id="free_deliv_font">Free island-wide delivery for orders above $150</p>
-</div>
-<!-------------------------------------------------- Free Delivery (ends) --------------------------------------------------------->
+<!--<div class="container-fluid container_0">-->
+<!--    <p id="free_deliv_font">Free island-wide delivery for orders above $150</p>-->
+<!--</div>-->
+<!--&lt;!&ndash;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; Free Delivery (ends) -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
 
-<!-----------------------------------------------------navigation (start)---------------------------------------------------------->
-
-
-<!----------------------------------------------------------navigation (end)--------------------------------------------------------->
-<div class="container-fluid container_nav1">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light nav_container" style="line-height: 40px;">
-        <a href="index.html">
-            <img src="images/appeaseofcake_monosingle.png" width="54px" height="48px" alt="company logo">
-        </a>
-        <a class="navbar-brand font_appease" href="index.html">appeaseofcake</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav navbar_adjust">
-                <a class="nav-item1 nav-link text-center" href="cakes.html">Cakes</a>
-                <a class="nav-item2 nav-link text-center" href="about_us.html">About</a>
-                <a class="nav-item3 nav-link text-center" href="contact_us.html">Contact</a>
-                <li class="text-center nav-item4 pl-3 pr-3 pt-2"><a id="shopping_cart_icon" href="cakes_cart.html"><i
-                        class="fa fa-shopping-cart fa text-center"></i></a></li>
-                <a class="nav-item5 nav-link text-center" href="/register">Register</a>
-                <div th:fragment="login">
-                    <div sec:authorize="isAuthenticated()">
-                        <form th:action="@{/logout}" method="post">
-                            <input type="submit" class="nav-item6 nav-link active text-center" value="Sign Out"/>
-                        </form>
-                    </div>
+<!--&lt;!&ndash;-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;navigation (start)&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
 
 
-                    <div sec:authorize="isAnonymous()">
-                        <a class="nav-item6 nav-link active text-center" href="/login">Login</a>
-                        </p>
-                    </div>
+<!--&lt;!&ndash;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;navigation (end)-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+<!--<div class="container-fluid container_nav1">-->
+<!--    <nav class="navbar navbar-expand-lg navbar-light bg-light nav_container" style="line-height: 40px;">-->
+<!--        <a href="index.html">-->
+<!--            <img src="/images/appeaseofcake_monosingle.png" width="54px" height="48px" alt="company logo">-->
+<!--        </a>-->
+<!--        <a class="navbar-brand font_appease" href="index.html">appeaseofcake</a>-->
+<!--        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"-->
+<!--                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--            <span class="navbar-toggler-icon"></span>-->
+<!--        </button>-->
+<!--        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">-->
+<!--            <div class="navbar-nav navbar_adjust">-->
+<!--                <a class="nav-item1 nav-link text-center" href="cakes.html">Cakes</a>-->
+<!--                <a class="nav-item2 nav-link text-center" href="about_us.html">About</a>-->
+<!--                <a class="nav-item3 nav-link text-center" href="contact_us.html">Contact</a>-->
+<!--                <li class="text-center nav-item4 pl-3 pr-3 pt-2"><a id="shopping_cart_icon" href="cakes_cart.html"><i-->
+<!--                        class="fa fa-shopping-cart fa text-center"></i></a></li>-->
+<!--                <a class="nav-item5 nav-link text-center" href="/register">Register</a>-->
+<!--                <div th:fragment="login">-->
+<!--                    <div sec:authorize="isAuthenticated()">-->
+<!--                        <form th:action="@{/logout}" method="post">-->
+<!--                            <input type="submit" class="nav-item6 nav-link active text-center" value="Sign Out"/>-->
+<!--                        </form>-->
+<!--                    </div>-->
 
-                </div>
-                <!--                <a class="nav-item6 nav-link active text-center" href="/login">Login</a>-->
-            </div>
-        </div>
-    </nav>
-</div>
+
+<!--                    <div sec:authorize="isAnonymous()">-->
+<!--                        <a class="nav-item6 nav-link active text-center" href="/login">Login</a>-->
+<!--                        </p>-->
+<!--                    </div>-->
+
+<!--                </div>-->
+<!--                &lt;!&ndash;                <a class="nav-item6 nav-link active text-center" href="/login">Login</a>&ndash;&gt;-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </nav>-->
+<!--</div>-->
 
 <!----------------------------------------------------- Navbar (starts) here ------------------------------------------------------>
 <!-- <div class="container-fluid container_nav pt-1 pb-1">
@@ -125,7 +127,7 @@
 
 <main class="container-fluid container_aos">
     <section class="card" data-aos="fade-up-right">
-        <img id="aos_img" src="images/cakes_images/add_product.png" style="border: 3px solid #343346"
+        <img id="aos_img" src="/images/cakes_images/add_product.png" style="border: 3px solid #343346"
              ;alt="fresh pink marbled cake with macarons">
         <div>
             <h3 id="big_font">Adding New Product</h3>

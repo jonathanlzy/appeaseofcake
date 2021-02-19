@@ -1,16 +1,13 @@
 <!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
       xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
-
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!----------------------------------------------------- Bootstrap CSS -------------------------------------------------------->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
     <!--Gooogle fonts-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
@@ -23,90 +20,71 @@
     <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
-
-
     <!--Animate on scroll-->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
     <!--Font Awesome CDN-->
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <!--load all styles -->
-
     <!-- stylesheet main_page -->
-    <link rel="stylesheet" type="text/css" href="css/every-products.css" media="screen" />
-
+    <link rel="stylesheet" type="text/css" href="css/admin.css" media="screen" />
     <title>APPEASEOFCAKE</title>
-
 </head>
-
 <body>
-
 <!-- <header> -->
-<!-------------------------------------------------- Free Delivery (starts) here -------------------------------------------------->
-<!--<div class="container-fluid container_0">-->
-<!--    <p id="free_deliv_font">Free island-wide delivery for orders above $150</p>-->
-<!--</div>-->
-<!-------------------------------------------------- Free Delivery (ends) --------------------------------------------------------->
-
+<!-------------------------------------------------- Free Delivery (starts) here ------------------------------------------------>
+<div th:fragment="header">
+<div class="container-fluid container_0">
+    <p id="free_deliv_font">Free island-wide delivery for orders above $150</p>
+</div>
 <!-----------------------------------------------------navigation (start)---------------------------------------------------------->
-
-
-
 <!----------------------------------------------------------navigation (end)--------------------------------------------------------->
-<div th:insert="admin.html :: header"></div>
-<!--<div class="container-fluid container_nav1">-->
-<!--    <nav class="navbar navbar-expand-lg navbar-light bg-light nav_container" style="line-height: 40px;">-->
-<!--        <a href="index.html">-->
-<!--            <img src="images/appeaseofcake_monosingle.png" width="54px" height="48px" alt="company logo">-->
-<!--        </a>-->
-<!--        <a class="navbar-brand font_appease" href="index.html">appeaseofcake</a>-->
-<!--        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">-->
-<!--            <span class="navbar-toggler-icon"></span>-->
-<!--        </button>-->
-<!--        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">-->
-<!--            <div class="navbar-nav navbar_adjust">-->
-<!--                <a class="nav-item1 nav-link text-center" href ="cakes.html">Cakes</a>-->
-<!--                <a class="nav-item2 nav-link text-center" href="about_us.html">About</a>-->
-<!--                <a class="nav-item3 nav-link text-center" href="contact_us.html">Contact</a>-->
-<!--                <li class="text-center nav-item4 pl-3 pr-3 pt-2"><a id="shopping_cart_icon" href="cakes_cart.html"><i class="fa fa-shopping-cart fa text-center"></i></a></li>-->
-<!--                <a class="nav-item5 nav-link text-center" href="/register">Register</a>-->
-<!--                <div th:fragment="login">-->
-<!--                    <div sec:authorize="isAuthenticated()">-->
-<!--                        <form th:action="@{/logout}" method="post">-->
-<!--                            <input type="submit" class="nav-item6 nav-link active text-center" value="Sign Out"/>-->
-<!--                        </form>-->
-<!--                    </div>-->
-
-
-<!--                    <div sec:authorize="isAnonymous()">-->
-<!--                        <a class="nav-item6 nav-link active text-center" href="/login">Login</a>-->
-<!--                        </p>-->
-<!--                    </div>-->
-
-<!--                </div>-->
-<!--                &lt;!&ndash;                <a class="nav-item6 nav-link active text-center" href="/login">Login</a>&ndash;&gt;-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </nav>-->
-<!--</div>-->
-
+<!--<nav th:fragment="navbar" class="navbar navbar-expand-lg navbar-light bg-light nav_container" style="line-height: 41px;">-->
+<div class="container-fluid container_nav1">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light nav_container" style="line-height: 41px;">
+        <a href="index.html">
+            <img src="images/appeaseofcake_monosingle.png" width="54px" height="48px" alt="company logo">
+        </a>
+        <a class="navbar-brand font_appease" href="index.html">appeaseofcake</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav navbar_adjust">
+                <a class="nav-item1 nav-link text-center" href ="cakes.html">Cakes</a>
+                <a class="nav-item2 nav-link text-center" href="about_us.html">About</a>
+                <a class="nav-item3 nav-link text-center" href="contact_us.html">Contact</a>
+                <li class="text-center nav-item4 pl-3 pr-3 pt-2"><a id="shopping_cart_icon" href="cakes_cart.html"><i class="fa fa-shopping-cart fa text-center"></i></a></li>
+                <a class="nav-item5 nav-link text-center" href="/register">Register</a>
+                <li class="nav-item6" th:fragment="login" sec:authorize="isAuthenticated()">
+                    <form th:action="@{/logout}" method="post">
+                        <input type="submit" class="nav-item6 nav-link active text-center" value="LOGOUT"/>
+                    </form>
+                </li>
+                <div sec:authorize="isAnonymous()">
+                    <a class="nav-item7 nav-link active text-center"  href="/login">LOGIN</a>
+                    </p>
+                </div>
+                </li>
+                <!--                <a class="nav-item6 nav-link active text-center" href="/login">Login</a>-->
+            </div>
+        </div>
+    </nav>
+</div>
+</div>
 <!----------------------------------------------------- Navbar (starts) here ------------------------------------------------------>
 <!-- <div class="container-fluid container_nav pt-1 pb-1">
   <nav id="logo_border" class="navbar navbar-light navbar-expand-md">
-
     <div class="company_logo navbar-brand"> -->
 <!--div created to contain the cake image and name of company together -->
 <!-- <a href="index.html"><img class="logo_image" src="images/appeaseofcake_monosingle.png" alt="company logo"></a>
 </div>
 <h6 class="appeaseofcake_font">appeaseofcake</h6>
-
 <div>
 <button type="button" class="navbar_toggler" style="width:45px;" data-toggle="collapse" data-target="#navbarContents"
   aria-expanded="false" aria-controls="#navbarCollapse" aria-label="Toggle navigation"><span
     class="navbar-toggler-icon"></span></button> -->
 <!------------------Button to toggle nav collapse (Hamburger visibility hidden on media queries)----------------->
 <!-- </div>
-
 <div class="collapse navbar-collapse" id="navbarContents"> -->
 <!----------------------collapsing nav ------------------->
 <!-- <ul class="navbar-nav ml-auto"> -->
@@ -117,8 +95,6 @@
 <li class="navbar-item"><a href="contact_us.html">Contact</a></li>
 <li class="navbar-itemCart"><a id="shopping_cart_icon" href="cakes_cart.html"><i class="fa fa-shopping-cart fa text-center"></i></a></li>
 </ul> -->
-
-
 <!--------------(start)Login/Register Button to toggle Modal---------------->
 <!-- <div class="text-center">
   <a href="" class="btn btn-link modal_button" data-toggle="modal"
@@ -126,14 +102,11 @@
 <!--Login Button for Modal Linkage-->
 <!-- </div> -->
 <!--------------(end)Login/Register Button to toggle Modal---------------->
-
 <!--closing for unlisted items -->
 <!-- </nav> -->
 <!--closing for nav -->
 <!-- </div> -->
 <!--closing for container -->
-
-
 <!-- </header> -->
 <!---------------------------------- navbar ends here -------------------------------------->
 
@@ -158,74 +131,43 @@
     <div class="row row_lorem">
         <div class="col-12 col-xs-12 col-md-12 col-lg-12 col-xl-12 col_lorem">
             <p id="lorem_font">
-                APPEASEOFCAKE <br> All Products
+                APPEASEOFCAKE <br> Administration Page
             </p>
         </div>
     </div>
 </div>
 
 <!------------------------------------- 5th row ends here ------------------------------------>
-<div th:switch="${products}">
-    <div>
-        <h2 th:case="null">No record found !!</h2>
 
-        <div th:case="*">
-            <table class="table table-hover table-responsive">
-                <thead>
-                <tr>
-                    <th scope="col">Title</th>
-                    <th scope="col">Description</th>
-                    <th scope="col">Price</th>
-<!--                    <th class="hidden" scope="col">Quantity</th>-->
-<!--                    <th class="hidden" scope="col">SKU</th>-->
-<!--                    <th class="hidden" scope="col">User_id</th>-->
-                    <th scope="col">ImageURL</th>
 
-<!--                    <th scope="col">Show</th>-->
-                    <th scope="col">Edit</th>
-                    <th scope="col">Delete</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr th:each="product : ${products}">
-                    <td th:text="${product.title}"></td>
-                    <td th:text="${product.description}"></td>
-                    <td th:text="${product.price}"></td>
-<!--                    <td class="hidden" th:text="${product.quantity}"></td>-->
-<!--                    <td class="hidden" th:text="${product.sku}"></td>-->
-<!--                    <td class="hidden" th:text="${product.user_id}"></td>-->
-                    <td><img th:src="${product.imageURL}" alt="" width="60" height="60"></td>
-
-<!--                    <td>-->
-<!--                        <a th:href="@{product/show/{id}(id=${product.id})}"><button type="button" class="btn btn-success">-->
-<!--                            Show-->
-<!--                        </button></a>-->
-<!--                    </td>-->
-
-                    <td>
-                        <a th:href="@{product/edit/{id}(id=${product.id})}"><button type="button" class="btn btn-warning">
-                            Edit
-                        </button></a>
-                    </td>
-                    <td>
-                        <a th:href="@{product/delete/{id}(id=${product.id})}"><button type="button" class="btn btn-danger">
-                            Delete
-                        </button></a>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-        <a class="link2page" href="/product">Add New Product</a>
-        <a class="link2page" href="/admin">Admin Page</a>
-    </div>
-</div>
-<!--<a class="link2page" href="/product">Add New Product</a>-->
-<!--<a class="link2page" href="/admin">Admin Page</a>-->
 
 <!------------------------------------ 6th row starts here (aos) ----------------------------->
 
+<main class="container-fluid container_aos">
+    <section class="card" data-aos="fade-up-right">
+        <img id="aos_img" src="images/cakes_images/user-management-icon.jpg"  style="border: 3px solid #343346";alt="fresh pink marbled cake with macarons"><div>
+            <h3 id="big_font">Users Management</h3>
+            <p id="small_font">
+                Manage current user's database.
+            </p>
+            <a id="button_font" href="/every-users" class="btn">Click Here to Manage</a>
+        </div>
+    </section>
 
+    <section class="card" data-aos="fade-up-left">
+        <img id="aos_chocolate_cake" src="images/cakes_images/heritage_chocolate_cake_crop_500x500.jpg" style="border: 3px solid #343346"; alt="vanilla cake with chocolate drizzle">
+        <div>
+            <h3 id="big_font">Products Management</h3>
+            <p id="small_font">
+                Add new products. <br>
+                Edit/Delete existing products.
+
+            </p>
+            <a id="button_font" href="/product" class="btn">Click Here to Add New Products</a>
+            <a id="button_font" href="/every-products" class="btn">Click Here to Delete/Edit Existing Products</a>
+        </div>
+    </section>
+</main>
 
 <!------------------------------------- 6th row ends here (aos) --------------------------------->
 
@@ -336,87 +278,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-<!--<!DOCTYPE html>-->
-<!--<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">-->
-
-<!--<head>-->
-<!--    <meta charset="utf-8">-->
-<!--    <meta http-equiv="x-ua-compatible" content="ie=edge">-->
-<!--    <title>All Products</title>-->
-
-<!--    <meta name="viewport" content="width=device-width, initial-scale=1">-->
-<!--</head>-->
-
-<!--<body>-->
-<!--    <div th:switch="${products}">-->
-<!--        <p>-->
-<!--            <a href="/product">-->
-<!--            <i> Add Product </i></a>-->
-<!--        </p>-->
-<!--        <div>-->
-<!--            <h2 th:case="null">No record found !!</h2>-->
-
-<!--            <div th:case="*">-->
-<!--                <table>-->
-<!--                    <thead>-->
-<!--                        <tr>-->
-<!--                            <th>Title</th>-->
-<!--                            <th>Description</th>-->
-<!--                            <th>Price</th>-->
-<!--                            <th>Quantity</th>-->
-<!--                            <th>SKU</th>-->
-<!--                            <th>User_id</th>-->
-<!--                            <th>ImageURL</th>-->
-
-<!--                            <th>Show</th>-->
-<!--                            <th>Edit</th>-->
-<!--                            <th>Delete</th>-->
-<!--                        </tr>-->
-<!--                    </thead>-->
-<!--                    <tbody>-->
-<!--                        <tr th:each="product : ${products}">-->
-<!--                            <td th:text="${product.title}"></td>-->
-<!--                            <td th:text="${product.description}"></td>-->
-<!--                            <td th:text="${product.price}"></td>-->
-<!--                            <td th:text="${product.quantity}"></td>-->
-<!--                            <td th:text="${product.sku}"></td>-->
-<!--                            <td th:text="${product.user_id}"></td>-->
-<!--                            <td><img th:src="${product.imageURL}" alt="" width="40" height="40"></td>-->
-
-<!--                            <td>-->
-<!--                                <a th:href="@{product/show/{id}(id=${product.id})}">-->
-<!--                                    Show-->
-<!--                                </a>-->
-<!--                            </td>-->
-
-<!--                            <td>-->
-<!--                                <a th:href="@{product/edit/{id}(id=${product.id})}">-->
-<!--                                    Edit-->
-<!--                                </a>-->
-<!--                            </td>-->
-<!--                            <td>-->
-<!--                                <a th:href="@{product/delete/{id}(id=${product.id})}">-->
-<!--                                    Delete-->
-<!--                                </a>-->
-<!--                            </td>-->
-<!--                        </tr>-->
-<!--                    </tbody>-->
-<!--                </table>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-
-
-<!--    <a href="/">Back to index</a>-->
-
-<!--</body>-->
-
-<!--</html>-->

@@ -16,6 +16,6 @@ public class SuccessHandler implements AuthenticationSuccessHandler {
                                         HttpServletResponse httpServletResponse,
                                         Authentication authentication) throws IOException, ServletException {
         // After login, go to homepage
-        httpServletResponse.sendRedirect("/");
+        httpServletResponse.sendRedirect("/admin");
     }
 }
