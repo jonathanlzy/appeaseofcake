@@ -547,7 +547,7 @@
 /*****************MEDIA QUERY NAVBAR (END)*******************/
 /*-----------------------------------(end)FreeIslandwide css -----------------------------*/
 /*-------------------------------------(start) title"LOGIN" ------------------------------*/
-.container_logintitle{
+.container_logintitle{  
     margin: 25px auto;
     position: relative;
     font-family: 'Montserrat', sans-serif;

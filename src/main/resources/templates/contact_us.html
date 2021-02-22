@@ -38,364 +38,99 @@
      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDiLcRpWIwNNf_wLXt0jPwKDlh9Odr1oGs&callback=initMap">
     </script>
   
-    <title>CONTACT</title>
+    <title>LOGIN</title>
   
   </head>
   
   <body>
+  <div th:insert="/admin.html :: header"></div>
+<!--  <div th:if="${param.error}">-->
+<!--    Invalid username and password.-->
+<!--  </div>-->
+<!--  <div th:if="${param.logout}">-->
+<!--    You have been logged out.-->
+<!--  </div>-->
 
-  <div th:if="${param.error}">
-    Invalid username and password.
-  </div>
-  <div th:if="${param.logout}">
-    You have been logged out.
-  </div>
-  
-    <header>
-      <!---------------------------- Free Delivery (starts) here -------------------------------->
-      <div class="container container_0">
-        <p id="free_deliv_font">Free island-wide delivery for orders above $150</p>
-      </div>
-      <!------------------------------ Free Delivery (ends) ------------------------------------->
-  
-      <!----------------------------- Navbar (starts) here -------------------------------------->
-      <div class="container container_nav pt-2 pb-2">
-        <nav id="logo_border" class="navbar navbar-light navbar-expand-md">
-  
-          <div class="company_logo navbar-brand">
-            <!--div created to contain the cake image and name of company together -->
-            <a href="indexX.html"><img class="logo_image" src="images/appeaseofcake_monosingle.png" alt="company logo"></a>
-          </div>
-          <h6 class="appeaseofcake_font">appeaseofcake</h6>
-  
-          <div>
-            <button type="button" class="navbar_toggler" data-toggle="collapse" data-target="#navbarContents"
-              aria-expanded="false" aria-controls="#navbarCollapse" aria-label="Toggle navigation"><span
-                class="navbar-toggler-icon"></span></button>
-            <!------------------Button to toggle nav collapse (Hamburger visibility hidden on media queries)----------------->
-          </div>
-  
-          <div class="collapse navbar-collapse" id="navbarContents">
-            <!----------------------collapsing nav ------------------->
-            <ul class="navbar-nav ml-auto">
-              <!--  shifting nav links to the right side of the page -->
-              <li class="navbar-item active"><a href="cakes.html">Cakes</a></li>
-              <li class="navbar-item"><a href="about_us.html">About</a></li>
-              <li class="navbar-item"><a href="contact_us.html">Contact</a></li>
-              <li class="navbar-item"><a id="shopping_cart_icon" href="cakes_cart.html"><i class="fa fa-shopping-cart fa-lg"></i></a></li>
-            </ul>
-  
-            <!------------------------------------------Modal: Login / Register Form (start)----------------------------------------->
-            <!-- Add data-keyboard="false" data-backdrop="static" if don't want the modal to auto close when clicking outside the modal-->
-  
-            <div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" 
-                
-                aria-labelledby="myModalLabel" aria-hidden="true">
-              <div class="modal-dialog cascading-modal" style="max-width: 50%;" role="document">  <!--Increase width of modal-->
-                <!--Content-->
-                <div class="modal-content modal-popout-bg">
-                  <!--Add backgnd image-->
-  
-                  <!--Modal cascading tabs-->
-                  <div class="modal-c-tabs">
-  
-                    <!-- Modal tabs Login/Register starts here-->
-                    <ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
-                      <!--If want to change Tabs background-->
-                      <li class="nav-item">
-                        <a class="login_text nav-link active" data-toggle="tab" href="#panel7" role="tab"><i
-                            class="fas"></i>
-                          Login</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="register_text nav-link" data-toggle="tab" href="#panel8" role="tab"><i
-                            class="fas"></i>
-                          Register</a>
-                      </li>
-                    </ul>
-                    <!-- Modal tabs Login/Register ends here-->
-  
-                    <!-- Modal Tab panels -->
-                    <div class="tab-content">
-                      <!--Panel 7-->
-  
-                      <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
-  
-                        <!--Login Body-->
-                        <div class="modal-body mb-1 modalOne">
-                          <!--Your Email-->
-                          <form th:action="@{/login}" method="POST" role="form" class="login_form">   <!-----------------------------------LOGIN FORM (START)------------------------------------>
-                            <div class="md-form form-sm mb-5">
-                              <i class="fas prefix"></i>
-                              <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput10">Email
-                                Address</label>
-                              <input type="text" typeX="email" name="username" nameX="logEmail" id="logEmail" class="form-control form-control-sm validate"
-                                placeholder="Enter email">
-                            </div>
-  
-                            <div class="md-form form-sm mb-4">
-                              <!--Your Password-->
-                              <i class="fas prefix"></i>
-                              <label id="email_font" data-error="wrong" data-success="right"
-                                for="modalLRInput11">Password</label>
-                              <input type="password" name="password" nameX="logPw" id="logPw" class="form-control form-control-sm validate"
-                                placeholder="Enter password">
-                            </div>
-  
-                            <div class="text-center mt-2">
-                              <!--Login Button-->
-                              <button type="submit" class="login_btn btn btn-warning" id="login_submit">
-                                Log in</button>
-                            </div>
-                          </form>              <!-----------------------------------LOGIN FORM (END)--------------------------------------->
-                        </div>
-                        <!--Footer of Login Tab "Not a member?" "Forgot Password"-->
-                        <div class="modal-footer">
-                          <div class="options text-center text-md-right mt-1">
-                            <p id="notamember_font">Not a member? <a href="#" class="blue-text signup_click">Sign Up</a>
-                            </p>
-                            <p id="notamember_font">Forgot <a href="#" class="blue-text password_click">Password?</a></p>
-                          </div>
-                          <button type="button" class="btn btn-outline-info waves-effect ml-auto close_btn_modal"
-                            data-dismiss="modal">Close</button>
-                        </div>
-  
-                      </div>
-                      <!--/.Panel 7-->
-  
-                      <!--Panel 8-->
-                      <div class="tab-pane fade" id="panel8" role="tabpanel">
-  
-                        <!--Body (Modal Register Tab) (start)-->
-                        <!--EMAIL ADDRESS-->
-                        <div class="modal-body modalTwo">
-                          <!----------------SIGNUP Form (registration) starts here-------------->
-                          <form role="form" class="signup_form">   <!----------------SIGNUP Form (registration) starts here-------------->
-                           
-                            <div class="mb-3">
-                              <i class="fas prefix"></i>
-                              <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput12">Name (in full)</label>
-                              <input type="text" name="regName" id="regName" class="form-control form-control-sm validate"
-                                placeholder="Enter name (in full)">
-                                <p id="error_msg">Please enter a valid name (in full)</p>
-                            </div>
-  
-                            <div class="mb-3">
-                              <i class="fas prefix"></i>
-                              <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput12">Email address</label>
-                              <input type="email" name="regEmail" id="regEmail" class="form-control form-control-sm validate"
-                                placeholder="Enter email address ">
-                              <p id="error_msg1">Email must be a valid address, e.g. me@mydomain.com</p> <!--error msg  -->
-                            </div>
-  
-                            <!--PASSWORD/PASSWORD AGAIN-->
-                            <div class="form-row signup_form">
-                              <div class=" mb-0 col-md-6">
-                                <i class="fas prefix"></i>
-                                <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput13">Your
-                                password <a id="tooltipFont" href="#" data-tool-tip="1. Your password must be between 10 and 20 characters. 2. Your password must contain at least one uppercase, lowercase letters and number digits. 
-                                 3. Special characters allowed: ! @ # $ % & * - _ ?">
-                                  <i class="fa fa-question-circle fa-lg" style="font-size:15px"></i></a></label>
-                                <input type="password" name="regPw" id="regPw" 
-                                  class="form-control form-control-sm validate" placeholder="Enter password"> 
-                                  <i class="fa fa-eye fa-md" id="toggleEye"></i>
-                                <p id="error_msg2">Password invalid. Please kindly refer to "?" icon for password requirements.</p> <!--error msg  -->
-                              </div>
-  
-                              <div class=" mb-2 col-md-6">
-                                <i class="fas prefix"></i>
-                                <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput14">Repeat
-                                password</label>
-                                <input type="password" name="regPwAgain" id="regPwAgain"
-                                  class="form-control form-control-sm validate" placeholder="Enter password again">
-                                  <i class="fa fa-eye fa-md" id="toggleEye1"></i>
-                                  <p id="error_msg3">Passwords do not match, please enter your password again</p> <!--error msg  -->
-                              </div>
-                            </div>  
-  
-                              <!--HANDPHONE-->
-                              <div class="md-form form-sm mb-3 signup_form">
-                                <i class="fas prefix"></i>
-                                <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput12">Handphone no.</label>
-                                <input type="number" name="regHP" id="regHP" class="form-control form-control-sm validate"
-                                  placeholder="Enter handphone no. ">
-                                <p id="error_msg4">Handphone no. must be a valid Singapore number (8 digits; Starts from 8 or 9)</p> <!--error msg  -->
-                              </div>
-                        
-                              <!--HOME ADDRESS-->
-                              <div class="md-form form-sm mb-3 signup_form">
-                                <i class="fas prefix"></i>
-                                <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput12">Home Address (street)</label>
-                                <input type="text" name="regHomeAdd" id="regHomeAdd" class="form-control form-control-sm validate"
-                                  placeholder="Enter home address (street) ">
-                                <p id="error_msg5">Please enter a valid address (street)</p> <!--error msg  -->
-                              </div>
-  
-  
-  
-  
-                              <!--CITY/UNIT/POSTAL CODE-->
-                              <div class="form-row signup_form">
-  
-  
-                                <div class="md-form form-sm mb-3 col-md-6">
-                                  <i class="fas prefix"></i>
-                                  <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput12">City</label>
-                                  <input type="text" name="regCity" id="regCity" class="form-control form-control-sm validate"
-                                  placeholder="Enter city ">
-                                  <p id="error_msg6">Please enter a valid city name</p> <!--error msg  -->
-                                </div>
-  
-                                <div class="md-form form-sm mb-3 col-md-3">
-                                  <i class="fas prefix"></i>
-                                  <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput12">Unit</label>
-                                  <input type="text" name="regUnit" id="regUnit" class="form-control form-control-sm validate"
-                                  placeholder="Unit no. ">
-                                  <p id="error_msg7">Please enter your unit no.</p> <!--error msg  -->
-                                </div>
-  
-                                <div class="md-form form-sm mb-3 col-md-3">
-                                  <i class="fas prefix"></i>
-                                  <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput12">Postal Code</label>
-                                  <input type="number" name="regPostal" id="regPostal" class="form-control form-control-sm validate"
-                                  placeholder="Postal code">
-                                  <p id="error_msg8">Please enter a valid postal code</p> <!--error msg  -->
-                                </div>
-  
-                              </div>
-                        
-                          
-  
-                            <div class="text-center form-sm mt-2">
-                              <button type="submit" class="btn btn-info" id="signup_submit">Sign up</button>
-                            </div>
-                          </form> <!---------------------------SIGNUP Form (registration) ends here------------------------>
-                            
-                          <!---------------------SIGNUP Form (registration) ends here--------------------->
-
-                          <!--Body (Modal Register Tab) (end)-->
-  
-                        </div>
-                        <!--Footer of Register Tab (Modal) (start)-->
-                        <div class="modal-footer">
-                          <div class="options text-right">
-                            <p id="notamember_font" class="pt-1">Already have an account? <a href="#"
-                                class="blue-text reg_login">Log In</a></p>
-                          </div>
-                          <button type="button" class="btn btn-outline-info waves-effect ml-auto close_btn_modal"
-                            data-dismiss="modal">Close</button>
-                        </div>
-                        <!--Footer of Register Tab (Modal) (end)-->
-                      </div>
-                      <!--/.Panel 8-->
-                    </div>
-  
-                  </div>
-                </div>
-                <!--/.Content-->
-              </div>
-            </div>
-            <!--End of Modal: Login / Register Form-->
-  
-            <!--------------(start)Login/Register Button to toggle Modal---------------->
-            <div class="text-center">
-              <a href="" class="btn btn-link modal_button" data-toggle="modal"
-                data-target="#modalLRForm">Login / Register</a>
-              <!--Login Button for Modal Linkage-->
-            </div>
-            <!--------------(end)Login/Register Button to toggle Modal------------------>
-  
-          </div>
-          <!--closing for unlisted items -->
-        </nav>
-        <!--closing for nav -->
-      </div>
-      <!--closing for container -->
-  
-  
-    </header>
     
   <!---------------------------------- navbar ends here ---------------------------------------->
+<!--  <form th:action="@{/login}" method="POST" role="form" class="login_form">   &lt;!&ndash;-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;LOGIN FORM (START)&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+<!--    <div class="md-form form-sm mb-5">-->
+<!--      <i class="fas prefix"></i>-->
+<!--      <label id="email_font" data-error="wrong" data-success="right" for="modalLRInput10">Email-->
+<!--        Address</label>-->
+<!--      <input type="text" typeX="email" name="username" nameX="logEmail" id="logEmail" class="form-control form-control-sm validate"-->
+<!--             placeholder="Enter email">-->
+<!--    </div>-->
 
-  <!-------------------------- Parallax scrolling x fixed bckgnd (starts) ---------------------->
-  <div class="container container_parallax">
-    <div class="margin"></div> <!--Create whitespace above img-->
+<!--    <div class="md-form form-sm mb-4">-->
+<!--      &lt;!&ndash;Your Password&ndash;&gt;-->
+<!--      <i class="fas prefix"></i>-->
+<!--      <label id="email_font" data-error="wrong" data-success="right"-->
+<!--             for="modalLRInput11">Password</label>-->
+<!--      <input type="password" name="password" nameX="logPw" id="logPw" class="form-control form-control-sm validate"-->
+<!--             placeholder="Enter password">-->
+<!--    </div>-->
 
-      <section class="parallax">
-        <div class="parallax-inner text-center">
-          <h1 id="font_parallax">HELLO</h1>
-          <p id="font_three_busdays">*Please kindly allow us to get back to you within 3 business days.</p>
-        </div>
-      </section>
+<!--    <div class="text-center mt-2">-->
+<!--      &lt;!&ndash;Login Button&ndash;&gt;-->
+<!--      <button type="submit" class="login_btn btn btn-warning" id="login_submit">-->
+<!--        Log in</button>-->
+<!--    </div>-->
+<!--  </form>-->
 
-      <div class="margin"></div>  <!--Create whitespace at bottom of img-->
-  </div>  <!-- div for container --> 
-  <!-------------------------- Parallax scrolling x fixed bckgnd (ends) ------------------------>
-  <!---------------------------------- Google starts here -------------------------------------->
-  
-  <div class="container contact_form_google bg-white">
+
+  <div class="container-fluid bg-white modal_login_1">
+
+    <!-- image left -->
     <div class="row">
-      <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 d-flex justify-content-center">
-        <div id="map"></div>
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 image_login">
+        <img src="images/cakes_images/eggs_flour.jpg" alt="cake image for login form">
       </div>
 
-  <!------------------------------------- Google ends here -------------------------------------->
-  <!---------------------------------- Contact form starts here --------------------------------->
-    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 d-flex justify-content-center">
-    <!-- Card -->
-    <div class="">
-
-      <div class="pt-4 pb-3">
-
-        <h5 class="text-center mt-1 mb-4 contact_title">Drop us a message</h5>
-
-        <form action="#!">
-
-          <div class="form-row">
-            <div class="col">
-              <div class="md-form md-outline mt-0">
-                <input type="text" id="materialRegisterFormFirstName" class="form-control">
-                <label for="materialRegisterFormFirstName" id="font_convention">First name</label>
-              </div>
-            </div>
-            <div class="col">
-              <div class="md-form md-outline mt-0">
-                <input type="email" id="materialRegisterFormLastName" class="form-control">
-                <label for="materialRegisterFormLastName" id="font_convention">Last name</label>
-              </div>
-            </div>
+      <!-- form right -->
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 right_form_login">
+        <!-- form start -->
+        <form th:action="@{/login}" method="POST" role="form" class="login_form">
+          <div class="md-form form-sm mb-2">
+            <i class="fas prefix"></i>
+            <label id="emaila_font" data-error="wrong" data-success="right" for="modalLRInput10">Email
+              Address</label>
+<!--            <input type="email" name="username" id="logEmail" class="form-control form-control-sm validate"-->
+<!--                   placeholder="Enter email">-->
+            <input type="text" typeX="email" name="username" nameX="logEmail" id="logEmail" class="form-control form-control-sm validate"-->
           </div>
 
-          <div class="md-form md-outline mt-0">
-            <input type="email" id="defaultForm-email2" class="form-control">
-            <label data-error="wrong" data-success="right" for="defaultForm-email2" id="font_convention">Your email</label>
+          <div class="md-form form-sm mb-4">
+            <!--Your Password-->
+            <i class="fas prefix"></i>
+            <label id="emailb_font" data-error="wrong" data-success="right"
+                   for="modalLRInput11">Password</label>
+            <input type="password" name="password" id="logPw" class="form-control form-control-sm validate"
+                   placeholder="Enter password">
           </div>
 
-          <div class="md-form md-outline">
-            <input type="number" id="materialRegisterFormPhone" class="form-control" aria-describedby="materialRegisterFormPhoneHelpBlock">
-            <label for="materialRegisterFormPhone" id="font_convention">Phone number</label>
+          <div class="text-center mt-2">
+            <!--Login Button-->
+            <input type="submit" value="Sign in" class="login_btn btn btn-warning" id="login_submit">
           </div>
 
-          <!-- Your message box -->
-          <div class="md-form md-outline">
-            <textarea id="form76" class="md-textarea form-control" rows="4"></textarea>
-            <label for="form76" id="font_convention">Message</label>
+          <!-- (start) if/else thymeleaf -->
+          <div th:if="${param.error}" class="invalid_login">
+            Invalid username and password.
           </div>
-
-          <div class="text-center mb-2">
-            <button type="submit" class="btn btn-warning mb-4 contact_btn">Submit</button>
+          <div th:if="${param.logout}" class="loggedOut">
+            You have been logged out.
           </div>
+          <!-- (end) if/else thymeleaf -->
 
         </form>
+        <!-- form end -->
 
       </div>
-
+      <!--closing div for col-->
     </div>
-<!-- Card -->
-    </div>
+    <!--closing div for row-->
   </div>
-  </div>
-
   <!--------------------------------  Contact form ends here -------- --------------------------->
 
   

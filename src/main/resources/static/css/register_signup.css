@@ -546,85 +546,23 @@
 /******** MEDIA QUERY (MAX-WIDTH) [END] ***********/
 /*****************MEDIA QUERY NAVBAR (END)*******************/
 /*-----------------------------------(end)FreeIslandwide css -----------------------------*/
-/*-------------------------------------(start) title"LOGIN" ------------------------------*/
-.container_logintitle{
-    margin: 25px auto;
-    position: relative;
-    font-family: 'Montserrat', sans-serif;
-}
-/*-------------------------------------(end) title"LOGIN" --------------------------------*/
-/*------------------------------------(start) login Image --------------------------------*/
-.modal_login_1{
-    margin-bottom:100px;
-    width:95%;
+
+/*------------------------------(start)words and button css ------------------------------*/
+
+.container_thankyou{
+    margin: 100px auto 0px;
 }
 
-.modal_login_1 > .row > .image_login > img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    padding: 0px;
-}
-/*--------------------------------------(end) login Image --------------------------------*/
-/*-------------------------------------(start) login Form --------------------------------*/
-.login_form{
-    margin-top: 130px;
+.btn_bmargin{
+    margin-bottom: 100px;
 }
 
-#emaila_font,#emailb_font{
-    font-size: 11px;
-    position: relative;
-    font-family: 'Montserrat', sans-serif;
+.successfully_reg{
+    margin-bottom: 75px;
+    letter-spacing: 0.03em;
 }
+/*----------------------------------(end)words and button css ------------------------------*/
 
-#login_submit{
-    margin-top: 60px;
-    margin-bottom: 20px;
-}
-
-#login_submit{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
-    font-weight: bold;
-}
-/*---------------------------------------(end) login Form --------------------------------*/
-/*------------------------------(start) if/else thymeleaf --------------------------------*/
-.invalid_login{
-    font-size: 14px;
-    position: relative;
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
-    color: red;
-    margin-top: 0px;
-}
-
-.loggedOut{
-    font-size: 14px;
-    position: relative;
-    font-family: 'Montserrat', sans-serif;
-    text-align:center;
-    color:green;
-    margin-top: 0px;
-}
-/*-------------------------------(end) if/else thymeleaf --------------------------------*/
-
-/**************************** LOGIN FORM MEDIA QUERY [START] *****************************/
-@media screen and (max-width: 767px){
-    .login_form{
-        margin-top: 50px;
-    }
-
-    #emaila_font, #emailb_font{
-        font-size: 11px;
-        position: relative;
-        font-family: 'Montserrat', sans-serif;
-    }
-
-    #login_submit{
-        margin-top: 30px;
-    }
-}
-/****************************** LOGIN FORM MEDIA QUERY [END] *****************************/
 /*---------------------------------------(start) Footer-------------------------------------*/
 
 .logo1{                                             /* footer cake logo adjust width/height */

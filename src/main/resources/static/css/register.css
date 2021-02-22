@@ -543,89 +543,222 @@
         margin-bottom: 110px;
     }
 }
+
 /******** MEDIA QUERY (MAX-WIDTH) [END] ***********/
 /*****************MEDIA QUERY NAVBAR (END)*******************/
 /*-----------------------------------(end)FreeIslandwide css -----------------------------*/
-/*-------------------------------------(start) title"LOGIN" ------------------------------*/
-.container_logintitle{
+/*---------------------------------(start) title"REGISTRATION" ---------------------------*/
+.container_registertitle{  
     margin: 25px auto;
     position: relative;
     font-family: 'Montserrat', sans-serif;
 }
-/*-------------------------------------(end) title"LOGIN" --------------------------------*/
-/*------------------------------------(start) login Image --------------------------------*/
-.modal_login_1{
+/*---------------------------------(end)title "REGISTRATION" -----------------------------*/
+/*---------------------------------(start) Registration Image ----------------------------*/
+.modal_registration_1{
     margin-bottom:100px;
     width:95%;
 }
 
-.modal_login_1 > .row > .image_login > img {
+.modal_registration_1 > .row > .image_registration > img {
     object-fit: cover;
     width: 100%;
-    height: 100%;
     padding: 0px;
+    height: 100%;
+    /* -webkit-transform: scaleX(-1);
+    transform: scaleX(-1); */
 }
-/*--------------------------------------(end) login Image --------------------------------*/
-/*-------------------------------------(start) login Form --------------------------------*/
-.login_form{
-    margin-top: 130px;
+/*-----------------------------------(end) Registration Image -----------------------------*/
+/*----------------------------------(start) Registration Form -----------------------------*/
+.right_form_register{
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+    /* border: 5px solid red; */
 }
 
-#emaila_font,#emailb_font{
-    font-size: 11px;
+.signup_form, .signup_form_handphone, .signup_form_password{
+    /* border:5px solid blue; */
+    padding-top: 0px;
+    position: relative;
+}
+
+#email1_font, #email2_font, #email3_font, #email4_font, #email5_font{
+    font-size:11px;
     position: relative;
     font-family: 'Montserrat', sans-serif;
 }
 
-#login_submit{
-    margin-top: 60px;
-    margin-bottom: 20px;
+.homepage_link{
+    font-size: 14px;
+    margin-bottom: 0px;
+    margin-top: -25px;
 }
 
-#login_submit{
+.homepage_link > a {
+    text-decoration: none;
+}
+
+#signup_submit{                                                          
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     font-weight: bold;
+    margin-top: 15px;
 }
-/*---------------------------------------(end) login Form --------------------------------*/
-/*------------------------------(start) if/else thymeleaf --------------------------------*/
-.invalid_login{
+
+#shiftup{               /*password*/
+    margin-top: 0px;
+}
+
+#shiftdown{             /*password again*/
+    margin-top: 2.5px;
+}
+
+.signup_form_handphone{           /*handphone*/
+    margin-top: 5px;
+    margin-bottom: 40px;
+}
+
+.nameinfull_reg{
+    margin-bottom: 0px;
+}
+
+.email_address_reg{
+    margin-bottom: 0px;
+}
+
+.signup_form_password{
+    margin-bottom: -15px;
+}
+
+.password_reg{
+    margin-bottom: 0px;
+}
+
+.password_again_reg{
+    margin-top: 2.5px;
+}
+/*--------------------------------(end) Registration Form ---------------------------------*/
+
+
+
+
+/*-------------------------------(start)Login Modal css ? EYE------------------------------*/
+
+#tooltipFont{
+    font-family: 'Questrial', sans-serif;
     font-size: 14px;
+}
+
+.fa-question-circle{            /*font awesome qn mark logo register tab modal*/
     position: relative;
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
+    bottom: 2px;
+    color:  #343346;
+}
+
+.fa-question-circle:hover{      /*font awesome qn mark logo register tab modal*/
+    color: hotpink;
+}
+
+a[data-tool-tip]{
+    position: relative;
+}
+
+a[data-tool-tip]::after{
+    content: attr(data-tool-tip);
+    display: block;
+    width: 310px;
+    background-color: #0F2776;
+    padding: 4px 7px;
+    color: white;
+    border-radius: 5px;
+    font-size: 0.80em;      /*85% of the parent fonts "Your password"*/
+    position: absolute;
+    bottom: 100%;
+    left: 46%;
+    /* white-space:nowrap; */
+    /* display: none; */
+    letter-spacing: 1px;
+    transform: scale(0);
+    transition: transform ease-out 300ms;
+}
+
+a[data-tool-tip]:hover::after{
+    transform: scale(1);
+}
+
+
+/*Registration Form(start) MOST IMPT REG FORM*/
+
+#signUP > input{
+    display: block;
+    font-size: 14px;
+    width: 100%;
+    height: 35px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    border: 2px solid #0072b1;
+    border: 1px solid #ced4da;
+    outline: none !important;
+}
+
+#error_msg, #error_msg1, #error_msg2, #error_msg3, #error_msg4{
     color: red;
-    margin-top: 0px;
+    font-size: 13px;
+    letter-spacing: 0.02em;
+    opacity: 0;  /*MUST BE OPACITY:0 not display:none*/
 }
 
-.loggedOut{
-    font-size: 14px;
-    position: relative;
-    font-family: 'Montserrat', sans-serif;
-    text-align:center;
-    color:green;
-    margin-top: 0px;
+.signup_form > #signUP > .green{
+    border: 2px solid limegreen;
 }
-/*-------------------------------(end) if/else thymeleaf --------------------------------*/
 
-/**************************** LOGIN FORM MEDIA QUERY [START] *****************************/
+.signup_form > #signUP > .red{
+    border: 2px solid red;
+}
+
+#toggleEye{
+    position: absolute;
+    left: 88%;
+    top: 42px;
+    cursor: pointer;
+}
+
+#toggleEye1{
+    position: absolute;
+    left: 88%;
+    top: 39px;
+    cursor: pointer;
+}
+/* Registration Form(end)*/
+
+/*-------------------------------(end)Login Modal css ? EYE--------------------------------*/
+
+/*-----------------------------(START) Media Query (REG FORM) -----------------------------*/
 @media screen and (max-width: 767px){
-    .login_form{
-        margin-top: 50px;
+    .signup_form {
+        margin-top: 45px;
     }
 
-    #emaila_font, #emailb_font{
+    #email1_font, #email2_font, #email3_font, #email4_font, #email5_font{
         font-size: 11px;
         position: relative;
         font-family: 'Montserrat', sans-serif;
     }
+    
+    #signup_submit{
+       /* border: 5px solid red; */
+       margin-top: 45px;
+    }
 
-    #login_submit{
-        margin-top: 30px;
+    .password_reg{
+        margin-bottom: 0px;
     }
 }
-/****************************** LOGIN FORM MEDIA QUERY [END] *****************************/
-/*---------------------------------------(start) Footer-------------------------------------*/
+/*------------------------------(END) Media Query (REG FORM) -----------------------------*/
+
+
+/*---------------------------------------(start) Footer-----------------------------------*/
 
 .logo1{                                             /* footer cake logo adjust width/height */
     width: 128px;
