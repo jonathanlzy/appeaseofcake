@@ -33,22 +33,15 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		//DO NOT EDIT
 		//do not authenticate these APIs
 		web.ignoring()
-
-				.antMatchers("/cakes.html")
-
 				.antMatchers("/css/**")
 				.antMatchers("/js/**")
 				.antMatchers("/images/**")
-//				.antMatchers("/images/cakes_images/**")
-//				.antMatchers("/product/edit/{id}")
 				.antMatchers("/product/all")
-				.antMatchers("/register")
 				.antMatchers("/user/new")
 				.antMatchers("/every-users")
 				.antMatchers("/user-photos/**")
 				.antMatchers("/products/**")
 				.antMatchers("/products/json/**") //is this necessary?
-				.antMatchers("/cakes")
 				.antMatchers("/cake_template")
 				.antMatchers("/users/**");
 	}
@@ -58,6 +51,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		http
 			.authorizeRequests()
 				.antMatchers("/").permitAll()
+				.antMatchers("/register").permitAll()
+				.antMatchers("/about_us").permitAll()
+				.antMatchers("/cakes").permitAll()
+				.antMatchers("/index").permitAll()
+				.antMatchers("/login").permitAll()
+				.antMatchers("/contact_us").permitAll()
+
 				.antMatchers("/product").hasRole("ADMIN")
 				.anyRequest().authenticated()
 				.and()
@@ -108,3 +108,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		return new InMemoryUserDetailsManager(list);
 	}
 }
+
+
+
+

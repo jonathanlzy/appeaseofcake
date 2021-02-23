@@ -25,7 +25,7 @@ public class UserController {
     @GetMapping(path="/login")
     public String login(Model model) {
         // if it is already login, redirect to the main page
-        return "contact_us"; //TODO - we need to use contact_us.html
+        return "login"; //TODO - we need to use contact_us.html
         // if it is not login, show login
     }
 

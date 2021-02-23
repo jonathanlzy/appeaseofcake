@@ -5,7 +5,7 @@ import java.util.List;
 
 @Entity
 public class User {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.TABLE) // GenerationType.TABLE will allow auto-increment of id
     @Column(name = "id")
@@ -14,6 +14,7 @@ public class User {
     private String password;
     private String email;
     private String userType;
+    private String telephone;
 
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "user_id")
@@ -84,11 +85,19 @@ public class User {
         super();
     }
 
-    public User(String username, String password, String email, String userType) {
+    public User(String username, String password, String email, String userType, String telephone) {
         this.username = username;
         this.password = password;
         this.email = email;
         this.userType = userType;
+        this.telephone = telephone;
     }
 
+    public String getTelephone() {
+        return telephone;
+    }
+
+    public void setTelephone(String telephone) {
+        this.telephone = telephone;
+    }
 }

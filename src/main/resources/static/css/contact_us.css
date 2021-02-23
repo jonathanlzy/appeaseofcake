@@ -47,7 +47,7 @@
 }
 
 #navbarNavAltMarkup > .navbar-nav > li > a > .fa{
-    font-size: 25px;
+    font-size: 10px;
     color : gray;
 }
 
@@ -70,7 +70,7 @@
     background-image: linear-gradient(45deg, orange, #d40d59, #772dcc, blue);
     background-size: 100%;
     -webkit-background-clip: text;
-    -moz-background-clip: text;
+    /*-moz-background-clip: text;*/
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
 }
@@ -84,7 +84,7 @@
     background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
     background-size: 100%;
     -webkit-background-clip: text;
-    -moz-background-clip: text;
+    /*-moz-background-clip: text;*/
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
     font-size: 18px;
@@ -98,10 +98,10 @@
 .nav-item6:hover{
     font-size: 17px;
     background-color: #f3ec78;
-    background-image: linear-gradient(#ffA500);
+    /*background-image: linear-gradient(#ffA500);*/
     background-size: 100%;
     -webkit-background-clip: text;
-    -moz-background-clip: text;
+    /*-moz-background-clip: text;*/
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
     margin-bottom:10px;
@@ -114,7 +114,7 @@
     background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
     background-size: 100%;
     -webkit-background-clip: text;
-    -moz-background-clip: text;
+    /*-moz-background-clip: text;*/
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
     font-size: 18px;
@@ -126,10 +126,10 @@
 .nav-item7:hover{
     font-size: 17px;
     background-color: #f3ec78;
-    background-image: linear-gradient(#ffA500);
+    /*background-image: linear-gradient(#ffA500);*/
     background-size: 100%;
     -webkit-background-clip: text;
-    -moz-background-clip: text;
+    /*-moz-background-clip: text;*/
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
 }
@@ -147,7 +147,7 @@
     background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
     background-size: 100%;
     -webkit-background-clip: text;
-    -moz-background-clip: text;
+    /*-moz-background-clip: text;*/
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
 }
@@ -170,7 +170,7 @@
     }
 
     #navbarNavAltMarkup > .navbar-nav > li > a > .fa{
-        font-size: 23px;
+        font-size: 0px;
         color : gray;
     }
     #navbarNavAltMarkup > .navbar-nav > a{            /*change navbar links sizes*/
@@ -179,6 +179,7 @@
         font-family: 'Kumbh Sans', sans-serif;
         text-transform: uppercase;
         letter-spacing: 0.08em;
+        margin-bottom: 18px;
     }
     .container_nav1 > nav > .font_appease{              /*adjust font*/
         letter-spacing: 0.15em;
@@ -546,85 +547,248 @@
 /******** MEDIA QUERY (MAX-WIDTH) [END] ***********/
 /*****************MEDIA QUERY NAVBAR (END)*******************/
 /*-----------------------------------(end)FreeIslandwide css -----------------------------*/
-/*-------------------------------------(start) title"LOGIN" ------------------------------*/
-.container_logintitle{
-    margin: 25px auto;
-    position: relative;
-    font-family: 'Montserrat', sans-serif;
-}
-/*-------------------------------------(end) title"LOGIN" --------------------------------*/
-/*------------------------------------(start) login Image --------------------------------*/
-.modal_login_1{
-    margin-bottom:100px;
-    width:95%;
+
+/*--------------------------------------(start)Login Modal css-------------------------------*/
+
+.login_text{
+    font-family: 'Questrial', sans-serif;  /*change tab modal font*/
 }
 
-.modal_login_1 > .row > .image_login > img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    padding: 0px;
-}
-/*--------------------------------------(end) login Image --------------------------------*/
-/*-------------------------------------(start) login Form --------------------------------*/
-.login_form{
-    margin-top: 130px;
+.register_text{
+    font-family: 'Questrial', sans-serif;  /*change tab modal font*/
 }
 
-#emaila_font,#emailb_font{
-    font-size: 11px;
-    position: relative;
-    font-family: 'Montserrat', sans-serif;
+
+#email_font{
+    font-family: 'Questrial', sans-serif;   /*change Login/Register Email and password font*/
+    font-size: 10px;
 }
 
-#login_submit{
-    margin-top: 60px;
-    margin-bottom: 20px;
-}
-
-#login_submit{
-    font-family: 'Montserrat', sans-serif;
+#tooltipFont{
+    font-family: 'Questrial', sans-serif;
     font-size: 14px;
+}
+
+#password_font{
+    font-family: 'Questrial', sans-serif;   /*change Login password font*/
+    font-size:16px;
+}
+
+input {
+    font-size: 14px;
+    font-family: 'Questrial', sans-serif;
+}
+
+input::-webkit-input-placeholder {          /*change login/register modal placeholder size*/
+    font-size: 14px;
+    font-family: 'Questrial', sans-serif;
+}
+
+.login_btn{                                 /*login button*/
+    font-family: 'Questrial', sans-serif;
+    /* border-radius: 7px; */
+    padding-left:16px;
+    padding-right:16px;
+}
+
+.signup_click{
+    font-family: 'Questrial', sans-serif;   /*Login: edit Login Sign Up link */
+    font-size:13px;
+}
+
+.password_click{                            /*Login: edit Login Password link */
+    font-family: 'Questrial', sans-serif;
+    font-size:13px;
+}
+
+.reg_login{                                 /*Register: "Log in" link */
+    font-family: 'Questrial', sans-serif;
+    font-size:13px;
+}
+
+.close_btn_modal{                           /*Register/Login Tab(Footer): Close button fonts*/
+    font-family: 'Questrial', sans-serif;
+}
+
+#notamember_font{                           /*Register/Login Tab: Footer texts fonts (non-links texts)*/
+    font-family: 'Questrial', sans-serif;
+    font-size: 14px;
+}
+
+.modal .modal-popout-bg {
+    /* background-image: url("../images/cakes_images/modal-background2.jpg"); */
+    /* background-image: url("https://images.unsplash.com/photo-1519591841160-6af9d9ec3c68?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1356&q=80"); */
+    background-image: url("https://images.unsplash.com/photo-1581388646048-3c04adad37b3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+    background-repeat : no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.fa-question-circle{            /*font awesome qn mark logo register tab modal*/
+    position: relative;
+    bottom: 2px;
+    color:  #343346;
+}
+
+.fa-question-circle:hover{            /*font awesome qn mark logo register tab modal*/
+    color: hotpink;
+}
+
+a[data-tool-tip]{
+    position: relative;
+}
+
+a[data-tool-tip]::after{
+    content: attr(data-tool-tip);
+    display: block;
+    width: 310px;
+    background-color: #0F2776;
+    padding: 4px 7px;
+    color: white;
+    border-radius: 5px;
+    font-size: 0.80em;      /*85% of the parent fonts "Your password"*/
+    position: absolute;
+    bottom: 100%;
+    left: 46%;
+    /* white-space:nowrap; */
+    /* display: none; */
+    letter-spacing: 1px;
+    transform: scale(0);
+    transition: transform ease-out 300ms;
+}
+
+a[data-tool-tip]:hover::after{
+    transform: scale(1);
+}
+
+/* Login Form(start)*/
+.login_form >  div > input{
+    display: block;
+    font-size: 1em;
+    height:40px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 3px;
+    border: 2px solid #0072b1;
+    outline: none !important;
+}
+
+/* Login Form(end)*/
+
+/*Registration Form(start)*/
+
+.signup_form > div > input{
+    display: block;
+    font-size: 1em;
+    height:40px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 3px;
+    border: 2px solid #0072b1;
+    outline: none !important;
+}
+
+#error_msg, #error_msg1, #error_msg2, #error_msg3, #error_msg4, #error_msg5, #error_msg6, #error_msg7, #error_msg8{
+    color: red;
+    font-size: 12px;
+    letter-spacing: 0.02em;
+    opacity: 0;  /*MUST BE OPACITY:0 not display:none*/
+}
+
+.signup_form > div > .green{
+    border: 2px solid limegreen;
+}
+
+.signup_form > div > .red{
+    border: 2px solid orangered;
+}
+
+#toggleEye{
+    position: absolute;
+    left: 88%;
+    top: 44px;
+    cursor: pointer;
+}
+
+#toggleEye1{
+    position: absolute;
+    left: 88%;
+    top: 44px;
+    cursor: pointer;
+}
+/* Registration Form(end)*/
+
+
+
+/*--------------------------------------(end)Login Modal css-------------------------------------*/
+
+/*----------------------------------(start) contact form css-------------------------------------*/
+
+
+.contact_title{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color:#0F2776;
+}
+
+.contact_btn{
+    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
 }
-/*---------------------------------------(end) login Form --------------------------------*/
-/*------------------------------(start) if/else thymeleaf --------------------------------*/
-.invalid_login{
-    font-size: 14px;
-    position: relative;
+
+#font_convention{
     font-family: 'Montserrat', sans-serif;
-    text-align: center;
-    color: red;
-    margin-top: 0px;
+    /* font-weight: bold; */
 }
 
-.loggedOut{
-    font-size: 14px;
-    position: relative;
+/*-----------------------------------(end) contact form css--------------------------------------*/
+
+
+/*-------------------------- Parallax scrolling x fixed bckgnd (starts) -------------------------*/
+
+.parallax{
+    background-image: url("../images/cakes_images/pexels-karolina-grabowska-4040691.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    /* background-position: bottom; */
+    height: 100%;     /* height of image */
+    /* -webkit-filter: grayscale(100%);
+    filter: grayscale(100%); */
+}
+
+.parallax-inner{
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+#font_parallax{
+    /* text-align: center; */
+    font-family: 'Times New Roman', Times, serif;
+    /* color:lightyellow; */
+    color:#0F2776;
+    /* opacity: 0.7; */
+    font-size: 7em;
+}
+
+#font_three_busdays{
     font-family: 'Montserrat', sans-serif;
-    text-align:center;
-    color:green;
-    margin-top: 0px;
+    font-size: 15px;
+    font-weight: bold;
+    color:#0F2776;
 }
-/*-------------------------------(end) if/else thymeleaf --------------------------------*/
 
-/**************************** LOGIN FORM MEDIA QUERY [START] *****************************/
-@media screen and (max-width: 767px){
-    .login_form{
-        margin-top: 50px;
-    }
-
-    #emaila_font, #emailb_font{
-        font-size: 11px;
-        position: relative;
-        font-family: 'Montserrat', sans-serif;
-    }
-
-    #login_submit{
-        margin-top: 30px;
-    }
+.margin{
+    /* border: 5px dotted blue; */
+    margin: 2% 0;
 }
-/****************************** LOGIN FORM MEDIA QUERY [END] *****************************/
+
+#font_three_busdays{
+    letter-spacing: 0.05em;
+}
+
+/*----------------------------- Parallax scrolling x fixed bckgnd (ends) -----------------------*/
+
 /*---------------------------------------(start) Footer-------------------------------------*/
 
 .logo1{                                             /* footer cake logo adjust width/height */
@@ -799,7 +963,8 @@ hr{                                /*WRITE TO US, LOCATE US, SOCIAL MEDIA (UNDER
     color: white;
     letter-spacing: 0.2em;
     font-family: 'Montserrat', sans-serif;
-    line-height: center;
+    /*line-height: center;*/
+    vertical-align: middle;
     position: relative;
     top: 9px;
 }
