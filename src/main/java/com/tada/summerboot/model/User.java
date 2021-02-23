@@ -10,11 +10,32 @@ public class User {
     @GeneratedValue(strategy = GenerationType.TABLE) // GenerationType.TABLE will allow auto-increment of id
     @Column(name = "id")
     private Integer id;
-    private String username;
-    private String password;
-    private String email;
+    private Integer telephone;
     private String userType;
-    private String telephone;
+
+    private String username;
+    private String email;
+    private String password;
+
+    public String getRetype_password() {
+        return retype_password;
+    }
+
+    public void setRetype_password(String retype_password) {
+        this.retype_password = retype_password;
+    }
+
+    private String retype_password;
+
+    public Integer getTelephone() {
+        return telephone;
+    }
+
+    public void setTelephone(Integer telephone) {
+        this.telephone = telephone;
+    }
+
+
 
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "user_id")
@@ -85,19 +106,19 @@ public class User {
         super();
     }
 
-    public User(String username, String password, String email, String userType, String telephone) {
+    public User(String username, String password, String email, String userType) {
         this.username = username;
-        this.password = password;
         this.email = email;
+        this.password = password;
         this.userType = userType;
-        this.telephone = telephone;
     }
 
-    public String getTelephone() {
-        return telephone;
-    }
-
-    public void setTelephone(String telephone) {
+    public User( String userType, String username, String email, String password, String retype_password, Integer telephone) {
+        this.username = username;
+        this.email = email;
+        this.password = password;
+        this.retype_password = retype_password;
+//        this.userType = userType;
         this.telephone = telephone;
     }
 }

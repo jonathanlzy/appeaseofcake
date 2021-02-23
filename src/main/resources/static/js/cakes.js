@@ -6,7 +6,7 @@ function loopThrough(cakeProducts){
     console.log(cakeProducts);
 
     document.getElementById("cakes").innerHTML = `
-<div id="container_products" class="container">
+<div id="container_products" class="container-fluid" style="width:100%;">
 <div class="product-container">
 
 ${cakeProducts.map(function (cake) {

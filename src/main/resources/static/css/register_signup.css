@@ -47,7 +47,7 @@
 }
 
 #navbarNavAltMarkup > .navbar-nav > li > a > .fa{
-    font-size: 25px;
+    font-size: 10px;
     color : gray;
 }
 
@@ -70,7 +70,7 @@
     background-image: linear-gradient(45deg, orange, #d40d59, #772dcc, blue);
     background-size: 100%;
     -webkit-background-clip: text;
-    -moz-background-clip: text;
+    /*-moz-background-clip: text;*/
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
 }
@@ -84,7 +84,7 @@
     background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
     background-size: 100%;
     -webkit-background-clip: text;
-    -moz-background-clip: text;
+    /*-moz-background-clip: text;*/
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
     font-size: 18px;
@@ -98,10 +98,10 @@
 .nav-item6:hover{
     font-size: 17px;
     background-color: #f3ec78;
-    background-image: linear-gradient(#ffA500);
+    /*background-image: linear-gradient(#ffA500);*/
     background-size: 100%;
     -webkit-background-clip: text;
-    -moz-background-clip: text;
+    /*-moz-background-clip: text;*/
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
     margin-bottom:10px;
@@ -114,7 +114,7 @@
     background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
     background-size: 100%;
     -webkit-background-clip: text;
-    -moz-background-clip: text;
+    /*-moz-background-clip: text;*/
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
     font-size: 18px;
@@ -126,10 +126,10 @@
 .nav-item7:hover{
     font-size: 17px;
     background-color: #f3ec78;
-    background-image: linear-gradient(#ffA500);
+    /*background-image: linear-gradient(#ffA500);*/
     background-size: 100%;
     -webkit-background-clip: text;
-    -moz-background-clip: text;
+    /*-moz-background-clip: text;*/
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
 }
@@ -147,7 +147,7 @@
     background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
     background-size: 100%;
     -webkit-background-clip: text;
-    -moz-background-clip: text;
+    /*-moz-background-clip: text;*/
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
 }
@@ -170,7 +170,7 @@
     }
 
     #navbarNavAltMarkup > .navbar-nav > li > a > .fa{
-        font-size: 23px;
+        font-size: 0px;
         color : gray;
     }
     #navbarNavAltMarkup > .navbar-nav > a{            /*change navbar links sizes*/
@@ -179,6 +179,7 @@
         font-family: 'Kumbh Sans', sans-serif;
         text-transform: uppercase;
         letter-spacing: 0.08em;
+        margin-bottom: 18px;
     }
     .container_nav1 > nav > .font_appease{              /*adjust font*/
         letter-spacing: 0.15em;
@@ -737,7 +738,8 @@ hr{                                /*WRITE TO US, LOCATE US, SOCIAL MEDIA (UNDER
     color: white;
     letter-spacing: 0.2em;
     font-family: 'Montserrat', sans-serif;
-    line-height: center;
+    /*line-height: center;*/
+    vertical-align: middle;
     position: relative;
     top: 9px;
 }
