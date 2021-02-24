@@ -6,7 +6,7 @@ function trashCake(cakeId) {
   // For development purpose only, set flag to false, to prevent full reload of all cakes
   // sessionStorage.setItem("canReloadAllCakesAgain","false");
 
-  window.location.href = "cakes_cart.html";
+  window.location.href = "cakes_cart";
 }
 
 const inch8 = 12; // add $12 for 8inch cake choice
