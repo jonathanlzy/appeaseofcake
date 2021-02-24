@@ -10,8 +10,55 @@ function load() {
 
 document.onload = load();
 
-// // Parsing Form to CHECKOUT CART (START)
-// const consumerForm = document.querySelector('.consumer_selection');
+function sentToLocal() {
+    var urlParams = new URLSearchParams(window.location.search);
+    var pname = urlParams.get('name');
+    var desc = urlParams.get('desc');
+    var price = urlParams.get('price');
+    var image = urlParams.get('img');
+    var cakeSize = document.querySelector('[name="cakeSize"]:checked').value;
+    var candles = document.querySelector('[name="candles"]').value;
+        
+    // get existing stored cakesData from local storage if any
+    var storedCakesData =  JSON.parse(localStorage.getItem("cakesData"));
+    var addCakeProduct;
+    var updateId = 0;
+
+    if (storedCakesData!==null) {      // have cakes sitting in cart page, awaiting checkout
+        updateId = storedCakesData.length;
+        
+        addCakeProduct = {
+            productId: updateId,
+            productName: pname,
+            description: desc,
+            price: price,
+            cakesQuantity: 1,
+            cakeSize: cakeSize,
+            candles: candles,
+            imageUrl: image
+            };
+        storedCakesData[updateId] = addCakeProduct;
+        localStorage.setItem("cakesData",JSON.stringify(storedCakesData));
+    } else {                            // empty cart page, no cakes waiting to checkout, 
+        addCakeProduct = [              
+            {
+            productId: 1,               // so add the very 1st cake to cart page
+            productName: pname,
+            description: desc,
+            price: price,
+            cakesQuantity: 1,
+            cakeSize: cakeSize,
+            candles: candles,
+            imageUrl: image
+            }];
+        localStorage.setItem("cakesData",JSON.stringify(addCakeProduct));
+        }
+    }
+
+
+// ======================================================================================
+// Parsing Form to CHECKOUT CART (START)
+// const consumerForm = document.querySelector('.consumer_selection'); 
 // console.log(consumerForm);
 // const consumerFormRadio = document.querySelectorAll('.consumer_radioBtn > div > input'); //Nodelist(3)
 // console.log(consumerFormRadio);
@@ -24,21 +71,21 @@ document.onload = load();
 // // console.log(tenInch);
 // const noOfCandles = document.querySelector('#candlesQuantity');
 // // console.log(noOfCandles.value);
-//
-//
+
+
 // const sample = document.querySelectorAll('.consumer_radioBtn > div > input');
 // console.log(sample);
 // var prev = null;
 // sample.forEach(element => {
-//    if(sixInch.checked)
+//    if(sixInch.checked)     
 // });
-//
-//
+
+
 // consumerForm.addEventListener('submit', function(e){
-//
+
 //     e.preventDefault();
 //     console.log(e.target); //consumerForm
-//
+
 //     if(sixInch.checked == true){
 //         // alert(sixInch.value +'" inch cake selected');
 //         //if(noOfCandles.value <= 0){
@@ -46,14 +93,14 @@ document.onload = load();
 //             //alert('Will you like to include any candles? If not, press submit to continue.');
 //             //    if(noOfCandles >= 0){
 //             window.location = "cakes_cart.html";
-//
+            
 //     }else if(eightInch.checked == true){
 //         // alert(eightInch.value + '" inch cake selected');
 //         //if(noOfCandles.value < 1){
 //             //Prompt user to check whether they want any candle
 //             //alert('Will you like to include any candles? If not, press submit to continue.');
 //             window.location = "cakes_cart.html";
-//
+            
 //     }else if(tenInch.checked == true){
 //         // alert(tenInch.value + '" inch cake selected');
 //         //if(noOfCandles.value < 1){
@@ -64,8 +111,8 @@ document.onload = load();
 //             //}
 //     }else{
 //         alert('Please indicate the size selection.');
-//     }
-//
+//     } 
+
 // })
 // Parsing Form to CHECKOUT CART (END)
 

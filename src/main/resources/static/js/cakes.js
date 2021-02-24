@@ -11,7 +11,7 @@ function loopThrough(cakeProducts){
 
 ${cakeProducts.map(function (cake) {
         return ` 
-    <a href ="cake_template.html?img=${cake.imageURL}&name=${cake.title}&desc=${cake.description}&price=${cake.price}">
+    <a href ="cake_template?img=${cake.imageURL}&name=${cake.title}&desc=${cake.description}&price=${cake.price}">
     <div class="indi-product">
         <div class="product-hvr">
             <div class="product">

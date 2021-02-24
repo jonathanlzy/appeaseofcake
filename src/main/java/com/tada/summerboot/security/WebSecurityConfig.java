@@ -41,8 +41,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 				.antMatchers("/every-users")
 				.antMatchers("/user-photos/**")
 				.antMatchers("/products/**")
+
 				.antMatchers("/products/json/**") //is this necessary?
-				.antMatchers("/cake_template")
 				.antMatchers("/users/**");
 	}
 	@Override
@@ -58,6 +58,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 				.antMatchers("/login").permitAll()
 				.antMatchers("/contact_us").permitAll()
 				.antMatchers("/register_signup").permitAll()
+				.antMatchers("/cake_template").permitAll()
+				.antMatchers("/cakes_cart").permitAll()
 				.antMatchers("/product").hasRole("ADMIN")
 				.anyRequest().authenticated()
 				.and()

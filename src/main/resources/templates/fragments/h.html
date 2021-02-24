@@ -25,10 +25,10 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav navbar_adjust">
-                    <a class="nav-item1 nav-link text-center" href ="cakes">Cakes</a>
+                    <a class="nav-item1 nav-link text-center" href ="/cakes">Cakes</a>
                     <a class="nav-item2 nav-link text-center" href="about_us">About</a>
                     <a class="nav-item3 nav-link text-center" href="contact_us">Contact</a>
-                    <li class="text-center nav-item4 pl-3 pr-3 pt-2"><a id="shopping_cart_icon" href="cakes_cart.html"><i class="fa fa-shopping-cart fa text-center"></i></a></li>
+                    <li class="text-center nav-item4 pl-3 pr-3 pt-2"><a id="shopping_cart_icon" href="cakes_cart"><i class="fa fa-shopping-cart fa text-center"></i></a></li>
                     <a class="nav-item5 nav-link text-center" href="register">Register</a>
                     <li class="nav-item6" th:fragment="login" sec:authorize="isAuthenticated()">
                         <form th:action="@{/logout}" method="post">
