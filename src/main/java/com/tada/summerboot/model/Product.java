@@ -14,14 +14,22 @@ public class Product {
     private String sku;
     private String title;
     private String description;
+    private String imageURL;
     private String productType;
 
-    @Column(nullable = true, length = 64)
-    private String imageURL;
+//    @Column(nullable = true, length = 64)
 
-    // Required for the @OneToMany relationship with a User
-    @Column(name = "user_id")
-    private Integer user_id;
+
+    public Product(Integer id, BigDecimal price, Integer quantity, String sku, String title, String description, Integer user_id, String imageURL) {
+        this.id = id;
+        this.price = price;
+        this.quantity = quantity;
+        this.sku = sku;
+        this.title = title;
+        this.description = description;
+//        this.user_id = user_id;
+        this.imageURL = imageURL;
+    }
 
     public Integer getId() {
         return id;
@@ -71,36 +79,36 @@ public class Product {
         return imageURL;
     }
 
-    public Integer getUser_id() {
-        return user_id;
-    }
+//    public Integer getUser_id() {
+//        return user_id;
+//    }
 
-    public void setUser_id(Integer user_id) {
-        this.user_id = user_id;
-    }
+//    public void setUser_id(Integer user_id) {
+//        this.user_id = user_id;
+//    }
 
     public void setImageURL(String imageURL) {
         this.imageURL = imageURL;
     }
 
-    public Product(BigDecimal price, Integer quantity, String sku, String title, String description, Integer user_id) {
-        this.price = price;
-        this.quantity = quantity;
-        this.sku = sku;
-        this.title = title;
-        this.description = description;
-        this.user_id = user_id;
-    }
+//    public Product(BigDecimal price, Integer quantity, String sku, String title, String description, String user_id) {
+//        this.price = price;
+//        this.quantity = quantity;
+//        this.sku = sku;
+//        this.title = title;
+//        this.description = description;
+////        this.user_id = user_id;
+//    }
 
-    public Product(Integer id, BigDecimal price, Integer quantity, String sku, String title, String description, Integer user_id) {
-        this.id = id;
-        this.price = price;
-        this.quantity = quantity;
-        this.sku = sku;
-        this.title = title;
-        this.description = description;
-        this.user_id = user_id;
-    }
+//    public Product(Integer id, BigDecimal price, Integer quantity, String sku, String title, String description, Integer user_id) {
+//        this.id = id;
+//        this.price = price;
+//        this.quantity = quantity;
+//        this.sku = sku;
+//        this.title = title;
+//        this.description = description;
+//        this.user_id = user_id;
+//    }
 
     public Product(Integer id, BigDecimal price, Integer quantity, String sku, String title, String description, String imageURL) {
         this.id = id;
@@ -112,21 +120,19 @@ public class Product {
         this.imageURL = imageURL;
     }
 
-    public Product(BigDecimal price, Integer quantity, String sku, String title, String description) {
+//    public Product(BigDecimal price, Integer quantity, String sku, String title, String description) {
+//        this.price = price;
+//        this.quantity = quantity;
+//        this.sku = sku;
+//        this.title = title;
+//        this.description = description;
+//    }
+    public Product(BigDecimal price, Integer quantity, String sku, String title, String description, String imageURL) {
         this.price = price;
         this.quantity = quantity;
         this.sku = sku;
         this.title = title;
         this.description = description;
-    }
-    public Product(BigDecimal price, Integer quantity, String sku, String title, String description, Integer user_id, String imageURL) {
-        this.price = price;
-        this.quantity = quantity;
-        this.sku = sku;
-        this.title = title;
-        this.description = description;
-        this.user_id = user_id;
-
         this.imageURL = imageURL;
     }
     public Product(){
@@ -136,6 +142,6 @@ public class Product {
     @Override
     public String toString() {
         return "Product [id=" + id + ", title=" + title +
-                ", description=" + description + ", price=" + price + ", quantity=" + quantity + ", sku=" + sku + "]";
+                ", description=" + description + ", price=" + price + ", quantity=" + quantity + ", sku=" + sku + ", imageURL=" + imageURL + "]";
     }
 }

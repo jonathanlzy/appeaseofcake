@@ -11,4 +11,7 @@ public interface UserRepository extends JpaRepository<User, Integer> {
     // It ships with methods like .save() or .findById()
     @Query("SELECT n FROM User n WHERE n.username = ?1")
     User findByUsername(String username);
+
+    @Query("SELECT n FROM User n WHERE n.email = ?1")
+    User findByEmail(String email);
 }

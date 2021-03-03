@@ -12,6 +12,6 @@ public interface ProductRepository extends JpaRepository<Product, Integer> {
     // It ships with methods like .save() or .findById()
 
     //findAllProductByUserId - give the user id and get all the user's products
-    @Query("SELECT n FROM Product n WHERE n.user_id = ?1")
-    List<Product> findAllProductsByUserId(Integer user_id);
+//    @Query("SELECT n FROM Product n WHERE n.user_id = ?1")
+//    List<Product> findAllProductsByUserId(Integer user_id);
 }

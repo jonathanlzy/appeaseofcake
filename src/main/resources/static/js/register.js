@@ -1,4 +1,4 @@
-// ------------------------------- Register Tab(start)------------------------------- //
+// ------------------------------- Register Tab(start)-------------------------------//
 // const input1 = document.querySelectorAll('.signUP > input');       //NodeList(5)
 // console.log(input1);
 const form1 = document.querySelector('.signup_form');
@@ -18,11 +18,24 @@ const retype_password = document.querySelector('#regPwAgain');
 console.log(retype_password );
 const telephone = document.querySelector('#regHP');
 console.log(telephone);
+const address = document.querySelector('#regHomeAdd');
+console.log(address);
+const unit = document.querySelector('#regUnit');
+console.log(unit);
+const postal = document.querySelector('#regPostal');
+console.log(postal);
+
+
+
 const regNamePattern = /^([a-z,\s,\-]{2,50})$/i;
 const regEmailPattern = /^([a-z,A-Z,\d,\.,\-,\_]+)@([a-z,A-Z,\d,\-,\_]+)\.([a-z,A-Z]{2,8})(\.[a-z,A-Z]{2,8})?$/;  // \d=0-9 , \.=dot, \-=-, \_=_, +=no limit on chars
 const regPwPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[\w\d\@\-\!\?\*\&\%\$\#]{10,20}$/;        // cant use whitespace as a password  // \w matches a-z A-Z 0-9 and _ , at least a lowercase,Uppercase and digit is needed
 const regPwAgainPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[\w\d\@\-\!\?\*\&\%\$\#]{10,20}$/;    //.any single character, (?=)positive lookahead, *0 or more chars
 const regHPPattern = /^(?=8|9)[0-9]{8}$/;                       //set to 8 digits (Start from 8 or 9)
+const regHomeAddPattern = /^([a-z,A-Z,\d,\,\s]+)$/;             //Blk123, Woodlands Dr 70
+const regUnitPattern = /^(\#?[a-z,\-,\d]{2,6})$/i;              //1A, #08-188 can opt not to use # as well
+const regPostalPattern = /^[\d]{6}$/;                           //postal code: 123456
+
 // let keyData2;
 // console.log(keyData2);
 form1.addEventListener('submit', function(e){
@@ -62,11 +75,39 @@ form1.addEventListener('submit', function(e){
         alert('Please key in a valid handphone no.');
         return false;
     }
-    if(regexTestName !== false && regexTestEmail !== false && regexTestPw !== false && regexTestPwAgain !== false && regexTestHp !== false){
+
+    let regexTestAddress = regHomeAddPattern.test(address.value);
+    //console.log(regexTestAddress);
+    if (regexTestAddress === false){   //boolean compares to boolean
+        e.preventDefault();
+        alert('Please enter a valid address (street)');
+        return false;
+    }
+
+   let regexTestUnit = regUnitPattern.test(unit.value);
+    //console.log(regexTestUnit);
+    if (regexTestUnit === false){      //boolean compares to boolean
+        e.preventDefault();
+        alert('Please enter your unit no.');
+        return false;
+    }
+
+   let regexTestPostal = regPostalPattern.test(postal.value);
+    console.log(regexTestPostal);
+    if (regexTestPostal === false){    //boolean compares to boolean
+        e.preventDefault();
+        alert('Please enter a valid postal code');
+        return false;
+    }
+
+
+
+    if(regexTestName !== false && regexTestEmail !== false && regexTestPw !== false && regexTestPwAgain !== false && regexTestHp !== false && regexTestAddress !== false && regexTestUnit !== false && regexTestPostal !== false){
         // TODO - removed for testing
         alert('Your details have been registered with us. Thank you.');
         // document.location.href="register_signup.html";
     }
+
     // setting local storage (Objects values)
     const userForm = {
         regName: username.value,
@@ -74,6 +115,9 @@ form1.addEventListener('submit', function(e){
         regPw: password.value,
         regPwAgain: retype_password.value,
         regHP: telephone.value,
+        regHomeAdd: address.value,
+        regUnit: unit.value,
+        regPostal: postal.value
     };
     // let keyData2;
     if (localStorage.getItem('keyData2') === null){
@@ -132,6 +176,46 @@ telephone.addEventListener('keyup', function(ev){
         document.getElementById('error_msg4').style.opacity = '1';
     }
 })
+
+
+address.addEventListener('keyup', function(ev){
+    if(regHomeAddPattern.test(ev.target.value)){
+        ev.target.classList = "green";
+        document.getElementById('error_msg5').style.opacity = '0';
+    }else{
+        ev.target.classList = "red";
+        document.getElementById('error_msg5').style.opacity = '1';
+    }
+})
+
+unit.addEventListener('keyup', function(ev){
+    if(regUnitPattern.test(ev.target.value)){
+        ev.target.classList = "green";
+        document.getElementById('error_msg7').style.opacity = '0';
+    }else{
+        ev.target.classList = "red";
+        document.getElementById('error_msg7').style.opacity = '1';
+    }
+})
+
+postal.addEventListener('keyup', function(ev){
+    if(regPostalPattern.test(ev.target.value)){
+        ev.target.classList = "green";
+        document.getElementById('error_msg8').style.opacity = '0';
+    }else{
+        ev.target.classList = "red";
+        document.getElementById('error_msg8').style.opacity = '1';
+    }
+})
+
+
+
+
+
+
+
+
+
 // KEYUP LIVE VALIDATION [END]
 //toggle eye passwords
 togglePw.addEventListener('click',function(e){

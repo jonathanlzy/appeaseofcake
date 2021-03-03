@@ -1,0 +1,135 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!--------------------------------------- Bootstrap CSS --------------------------------------->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!--Gooogle fonts-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+
+  <!--Animate on scroll-->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!--Font Awesome CDN-->
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <!--load all styles -->
+
+  <!-- stylesheet main_page -->
+  <link rel="stylesheet" type="text/css" href="/css/cakes_cart.css" media="screen" />
+
+  <title>SHOPPING CART</title>
+
+
+  <style>
+    #checkout-form {
+      /*border: 1px solid black;*/
+      /*width: 200px;*/
+      margin: auto;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .pay-button {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 50px;
+    }
+
+    .index-link {
+      font-family: 'Montserrat', sans-serif;
+      padding-left: 5px;
+    }
+  </style>
+
+</head>
+
+<body>
+<div th:insert="fragments/h.html :: header"></div>
+
+  <!--------------------------------------------------- navbar ends here ----------------------------------------------------->
+
+<div class="container-fluid text-center bg-white mt-5 mb-5">
+  <h1 id="checkout_font">Payment Detail</h1>
+</div>
+<div class="container-fluid bg-white pay-button text-center">
+<form action='/charge' method='POST' id='checkout-form'>
+  <input type='hidden' th:value='${amount}' name='amount' />
+  <label style="font-size: 30px;">Total Amount : SGD $<span th:text='${amount/100}' /></label><br><br><br><br>
+  <!-- NOTE: data-key/data-amount/data-currency will be rendered by Thymeleaf -->
+  <script
+          src='https://checkout.stripe.com/checkout.js'
+          class='stripe-button'
+          th:attr='data-key=${stripePublicKey},
+                         data-amount=${amount},
+                         data-currency=${currency}'
+          data-name='appeaseofcake'
+          data-description='Cart Total Checkout'
+          data-image='/images/appeaseofcake_mono_cropped_30.png'
+          data-locale='auto'
+          data-zip-code='false'>
+  </script>
+</form>
+</div>
+
+<a class="index-link" href="/"> <<< Go back to index</a>
+
+
+
+
+
+  <!--------------------------------------------------(Start)title"CHECKOUT"-------------------------------------------->
+<!--  <div class="container container_shopcarttitle bg-white text-center py-0 my-5">-->
+<!--    <h3>PAYMENT</h3>-->
+<!--  </div>-->
+<!--  &lt;!&ndash;-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;(End)title"CHECKOUT"-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+
+<!--  <div class="container bg-white py-2 my-5">-->
+<!--    <div class="row">               -->
+<!--      <div class="col-sm-12">-->
+<!--          <p class="text-center lead mb-5">Thank you for shopping with us.</p>-->
+<!--            <div class="text-center"><a href="cakes" class="btn btn-primary btn-large">Continue Shopping</a></div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+
+  <!----------------------------------------------- Ending credits starts here ------------------------------------------------>
+
+<div th:insert="fragments/footer.html :: footer"></div>
+
+<!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+  <!---------- Javascript aos --------->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      offset: 200,
+      duration: 1000
+    });
+  </script>
+  <script type="text/javascript" src="/js/cakes_checkout.js"></script>
+
+</body>
+
+</html>

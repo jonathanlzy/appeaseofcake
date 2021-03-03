@@ -1,3 +1,4 @@
+
 /*--------------------------------(start)FreeIslandwide css ------------------------------*/
 
 .container-fluid {                     /* container of navigation bar, bs containers are padded, need to remove them*/
@@ -8,6 +9,7 @@
     background-color:#f2f4f5;         /*nav background color */
     padding-top:0px;
     width:100%;
+    overflow-x: hidden;
 }
 
 .container_0{                           /*free deliv container */
@@ -24,16 +26,17 @@
 
 #free_deliv_font{                      /*"Free delivery font", first row */
     color: white;
-    font-size: 13px;
+    font-size: 12px;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     letter-spacing: 0.03em;
+    margin-top: -2px;
 }
 
 /*-------------------------------------(start)NAVBAR css -----------------------------------*/
-.nav_container{
-    margin-top: -16px;
-}
+/*.nav_container{*/
+/*    margin-top: -16px;*/
+/*}*/
 
 #navbarNavAltMarkup{
     background-color:#252B34;
@@ -47,7 +50,7 @@
 }
 
 #navbarNavAltMarkup > .navbar-nav > li > a > .fa{
-    font-size: 10px;
+    font-size: 25px;
     color : gray;
 }
 
@@ -140,6 +143,8 @@
     color:#fa2871;
     font-family: 'PT Mono', monospace;
     font-size: 24px;
+    display: inline-block;
+
 }
 
 .container_nav1 > nav > .font_appease:hover{
@@ -160,274 +165,2526 @@
 /*****************MEDIA QUERY NAVBAR (START)*******************/
 /******** MEDIA QUERY (MAX-WIDTH) [START] *********/
 @media screen and (min-width: 992px){
-    #navbarNavAltMarkup > .navbar_adjust{
-        position: relative;
-        left: 140px;
+    #navbarNavAltMarkup{
+        /*background-color:#252B34;*/
+        background-color: #f8f9fa;
+        opacity: 0.8;
     }
 
-    #navbarNavAltMarkup{
-        background-color:#f8f9fa;
+    #navbarNavAltMarkup > .navbar_adjust{
+        position: relative;
+        left: 93px;
+        top: 10px;
     }
 
     #navbarNavAltMarkup > .navbar-nav > li > a > .fa{
-        font-size: 0px;
+        font-size: 25px;
         color : gray;
     }
+
+    #navbarNavAltMarkup > .navbar-nav > li > a > .fa:hover{
+        background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+        color:transparent;
+        -webkit-background-clip: text;
+    }
+
     #navbarNavAltMarkup > .navbar-nav > a{            /*change navbar links sizes*/
         color: grey;
-        font-size: 15px;
+        font-size: 18px;
         font-family: 'Kumbh Sans', sans-serif;
         text-transform: uppercase;
-        letter-spacing: 0.08em;
+        letter-spacing: 0.06em;
     }
-    .container_nav1 > nav > .font_appease{              /*adjust font*/
+
+    #navbarNavAltMarkup > .navbar-nav > a:hover{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, orange, #d40d59, #772dcc, blue);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+    .nav-item1{
+        margin-top:0px;
+    }
+
+    .nav-item6{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        font-size: 18px;
+        letter-spacing: 0.06em;
+        font-family: 'Kumbh Sans', sans-serif;
+        border: none;  !important;
+        outline: none !important;
+        margin-bottom:10px;
+    }
+
+    .nav-item6:hover{
+        font-size: 17px;
+        background-color: #f3ec78;
+        /*background-image: linear-gradient(#ffA500);*/
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        margin-bottom:10px;
+        border: none !important;
+        outline: none !important;
+    }
+
+    .nav-item7{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        font-size: 18px;
+        letter-spacing: 0.06em;
+        font-family: 'Kumbh Sans', sans-serif;
+        border: none;
+    }
+
+    .nav-item7:hover{
+        font-size: 17px;
+        background-color: #f3ec78;
+        /*background-image: linear-gradient(#ffA500);*/
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+
+    .container_nav1 > nav > .font_appease{
         letter-spacing: 0.15em;
         color:#fa2871;
         font-family: 'PT Mono', monospace;
         font-size: 24px;
-    }
-    .nav-item1, .nav-item2, .nav-item3, .nav-item4, .nav-item5, .nav-item6{  /*adjust margin between a*/
-        margin-right: 8px;
+        display: inline-block;
+
     }
 
+    .container_nav1 > nav > .font_appease:hover{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+    .nav-item1, .nav-item2, .nav-item3, .nav-item4, .nav-item5, .nav-item6 {
+        margin-right: 5px;
+    }
 }
 
-
-
-@media screen and (min-width: 1050px){
-    #navbarNavAltMarkup > .navbar_adjust{
-        position: relative;
-        left: 190px;
+@media screen and (min-width: 1000px){
+    #navbarNavAltMarkup{
+        /*background-color:#252B34;*/
+        background-color: #f8f9fa;
+        opacity: 0.8;
     }
 
-    #navbarNavAltMarkup{
-        background-color:#f8f9fa;
+    #navbarNavAltMarkup > .navbar_adjust{
+        position: relative;
+        left: 90px;
+        top: 10px;
     }
 
     #navbarNavAltMarkup > .navbar-nav > li > a > .fa{
-        font-size: 23.5px;
+        font-size: 25px;
+        color : gray;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > li > a > .fa:hover{
+        background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+        color:transparent;
+        -webkit-background-clip: text;
     }
 
     #navbarNavAltMarkup > .navbar-nav > a{            /*change navbar links sizes*/
-        font-size: 15.5px;
-        letter-spacing: 0.08em;
+        color: grey;
+        font-size: 18px;
+        font-family: 'Kumbh Sans', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
     }
 
-    .container_nav1 > nav > .font_appease{              /*adjust font*/
-        letter-spacing: 0.15em;
-        font-size: 24px;
+    #navbarNavAltMarkup > .navbar-nav > a:hover{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, orange, #d40d59, #772dcc, blue);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
     }
-    .nav-item1, .nav-item2, .nav-item3, .nav-item4, .nav-item5, .nav-item6{  /*adjust margin between a*/
+
+    .nav-item1{
+        margin-top:0px;
+    }
+
+    .nav-item6{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        font-size: 18px;
+        letter-spacing: 0.06em;
+        font-family: 'Kumbh Sans', sans-serif;
+        border: none;  !important;
+        outline: none !important;
+        margin-bottom:10px;
+    }
+
+    .nav-item6:hover{
+        font-size: 17px;
+        background-color: #f3ec78;
+        /*background-image: linear-gradient(#ffA500);*/
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        margin-bottom:10px;
+        border: none !important;
+        outline: none !important;
+    }
+
+    .nav-item7{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        font-size: 18px;
+        letter-spacing: 0.06em;
+        font-family: 'Kumbh Sans', sans-serif;
+        border: none;
+    }
+
+    .nav-item7:hover{
+        font-size: 17px;
+        background-color: #f3ec78;
+        /*background-image: linear-gradient(#ffA500);*/
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+
+    .container_nav1 > nav > .font_appease{
+        letter-spacing: 0.15em;
+        color:#fa2871;
+        font-family: 'PT Mono', monospace;
+        font-size: 24px;
+        display: inline-block;
+    }
+
+    .container_nav1 > nav > .font_appease:hover{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+    .nav-item1, .nav-item2, .nav-item3, .nav-item4, .nav-item5, .nav-item6 {
+        margin-right: 7px;
+    }
+}
+
+
+@media screen and (min-width: 1050px){
+    /*#navbarNavAltMarkup > .navbar_adjust{*/
+    /*    position: relative;*/
+    /*    left: 190px;*/
+    /*}*/
+
+    /*#navbarNavAltMarkup{*/
+    /*    background-color:#f8f9fa;*/
+    /*}*/
+
+    /*#navbarNavAltMarkup > .navbar-nav > li > a > .fa{*/
+    /*    font-size: 23.5px;*/
+    /*}*/
+
+    /*#navbarNavAltMarkup > .navbar-nav > a{            !*change navbar links sizes*!*/
+    /*    font-size: 15.5px;*/
+    /*    letter-spacing: 0.08em;*/
+    /*}*/
+
+    /*.container_nav1 > nav > .font_appease{              !*adjust font*!*/
+    /*    letter-spacing: 0.15em;*/
+    /*    font-size: 24px;*/
+    /*}*/
+    /*.nav-item1, .nav-item2, .nav-item3, .nav-item4, .nav-item5, .nav-item6{  !*adjust margin between a*!*/
+    /*    margin-right: 8px;*/
+    /*}*/
+    #navbarNavAltMarkup{
+        /*background-color:#252B34;*/
+        background-color: #f8f9fa;
+        opacity: 0.8;
+    }
+
+    #navbarNavAltMarkup > .navbar_adjust{
+        position: relative;
+        left: 130px;
+        top: 10px;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > li > a > .fa{
+        font-size: 25px;
+        color : gray;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > li > a > .fa:hover{
+        background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+        color:transparent;
+        -webkit-background-clip: text;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > a{            /*change navbar links sizes*/
+        color: grey;
+        font-size: 18px;
+        font-family: 'Kumbh Sans', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > a:hover{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, orange, #d40d59, #772dcc, blue);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+    .nav-item1{
+        margin-top:0px;
+    }
+
+    .nav-item6{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        font-size: 18px;
+        letter-spacing: 0.06em;
+        font-family: 'Kumbh Sans', sans-serif;
+        border: none;  !important;
+        outline: none !important;
+        margin-bottom:10px;
+    }
+
+    .nav-item6:hover{
+        font-size: 17px;
+        background-color: #f3ec78;
+        /*background-image: linear-gradient(#ffA500);*/
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        margin-bottom:10px;
+        border: none !important;
+        outline: none !important;
+    }
+
+    .nav-item7{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        font-size: 18px;
+        letter-spacing: 0.06em;
+        font-family: 'Kumbh Sans', sans-serif;
+        border: none;
+    }
+
+    .nav-item7:hover{
+        font-size: 17px;
+        background-color: #f3ec78;
+        /*background-image: linear-gradient(#ffA500);*/
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+
+    .container_nav1 > nav > .font_appease{
+        letter-spacing: 0.15em;
+        color:#fa2871;
+        font-family: 'PT Mono', monospace;
+        font-size: 24px;
+        display: inline-block;
+    }
+
+    .container_nav1 > nav > .font_appease:hover{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+    .nav-item1, .nav-item2, .nav-item3, .nav-item4, .nav-item5, .nav-item6 {
         margin-right: 8px;
     }
 }
 
 
 @media screen and (min-width: 1100px){
-    #navbarNavAltMarkup > .navbar_adjust{
-        position: relative;
-        left: 230px;
+    /*#navbarNavAltMarkup > .navbar_adjust{*/
+    /*    position: relative;*/
+    /*    left: 230px;*/
+    /*}*/
+
+    /*#navbarNavAltMarkup{*/
+    /*    background-color:#f8f9fa;*/
+    /*}*/
+
+    /*#navbarNavAltMarkup > .navbar-nav > li > a > .fa{*/
+    /*    font-size: 24px;*/
+    /*}*/
+
+    /*#navbarNavAltMarkup > .navbar-nav > a{            !*change navbar links sizes*!*/
+    /*    font-size: 16px;*/
+    /*    letter-spacing: 0.08em;*/
+    /*}*/
+
+    /*.container_nav1 > nav > .font_appease{              !*adjust font*!*/
+    /*    letter-spacing: 0.15em;*/
+    /*    font-size: 24px;*/
+    /*}*/
+    /*.nav-item1, .nav-item2, .nav-item3, .nav-item4, .nav-item5, .nav-item6{  !*adjust margin between a*!*/
+    /*    margin-right: 8px;*/
+    /*}*/
+    #navbarNavAltMarkup{
+        /*background-color:#252B34;*/
+        background-color: #f8f9fa;
+        opacity: 0.8;
     }
 
-    #navbarNavAltMarkup{
-        background-color:#f8f9fa;
+    #navbarNavAltMarkup > .navbar_adjust{
+        position: relative;
+        left: 150px;
+        top: 10px;
     }
 
     #navbarNavAltMarkup > .navbar-nav > li > a > .fa{
-        font-size: 24px;
+        font-size: 25px;
+        color : gray;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > li > a > .fa:hover{
+        background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+        color:transparent;
+        -webkit-background-clip: text;
     }
 
     #navbarNavAltMarkup > .navbar-nav > a{            /*change navbar links sizes*/
-        font-size: 16px;
-        letter-spacing: 0.08em;
+        color: grey;
+        font-size: 18px;
+        font-family: 'Kumbh Sans', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
     }
 
-    .container_nav1 > nav > .font_appease{              /*adjust font*/
-        letter-spacing: 0.15em;
-        font-size: 24px;
+    #navbarNavAltMarkup > .navbar-nav > a:hover{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, orange, #d40d59, #772dcc, blue);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
     }
-    .nav-item1, .nav-item2, .nav-item3, .nav-item4, .nav-item5, .nav-item6{  /*adjust margin between a*/
-        margin-right: 8px;
+
+    .nav-item1{
+        margin-top:0px;
+    }
+
+    .nav-item6{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        font-size: 18px;
+        letter-spacing: 0.06em;
+        font-family: 'Kumbh Sans', sans-serif;
+        border: none;  !important;
+        outline: none !important;
+        margin-bottom:10px;
+    }
+
+    .nav-item6:hover{
+        font-size: 17px;
+        background-color: #f3ec78;
+        /*background-image: linear-gradient(#ffA500);*/
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        margin-bottom:10px;
+        border: none !important;
+        outline: none !important;
+    }
+
+    .nav-item7{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        font-size: 18px;
+        letter-spacing: 0.06em;
+        font-family: 'Kumbh Sans', sans-serif;
+        border: none;
+    }
+
+    .nav-item7:hover{
+        font-size: 17px;
+        background-color: #f3ec78;
+        /*background-image: linear-gradient(#ffA500);*/
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+
+    .container_nav1 > nav > .font_appease{
+        letter-spacing: 0.15em;
+        color:#fa2871;
+        font-family: 'PT Mono', monospace;
+        font-size: 24px;
+        display: inline-block;
+    }
+
+    .container_nav1 > nav > .font_appease:hover{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+    .nav-item1, .nav-item2, .nav-item3, .nav-item4, .nav-item5, .nav-item6{
+        margin-right: 14px;
     }
 }
 
 
 @media screen and (min-width: 1150px){
-    #navbarNavAltMarkup > .navbar_adjust{
-        position: relative;
-        left: 280px;
-    }
+    /*#navbarNavAltMarkup > .navbar_adjust{*/
+    /*    position: relative;*/
+    /*    left: 280px;*/
+    /*}*/
+
+    /*#navbarNavAltMarkup{*/
+    /*    background-color:#f8f9fa;*/
+    /*}*/
+
+    /*#navbarNavAltMarkup > .navbar-nav > li > a > .fa{*/
+    /*    font-size: 24px;*/
+    /*}*/
+
+    /*#navbarNavAltMarkup > .navbar-nav > a{            !*change navbar links sizes*!*/
+    /*    font-size: 16px;*/
+    /*    letter-spacing: 0.08em;*/
+    /*}*/
+
+    /*.container_nav1 > nav > .font_appease{              !*adjust font*!*/
+    /*    letter-spacing: 0.15em;*/
+    /*    font-size: 24px;*/
+    /*}*/
+    /*.nav-item1, .nav-item2, .nav-item3, .nav-item4, .nav-item5, .nav-item6{  !*adjust margin between a*!*/
+    /*    margin-right: 8px;*/
+    /*}*/
 
     #navbarNavAltMarkup{
-        background-color:#f8f9fa;
+        /*background-color:#252B34;*/
+        background-color: #f8f9fa;
+        opacity: 0.8;
+    }
+
+    #navbarNavAltMarkup > .navbar_adjust{
+        position: relative;
+        left: 180px;
+        top: 10px;
     }
 
     #navbarNavAltMarkup > .navbar-nav > li > a > .fa{
-        font-size: 24px;
+        font-size: 25px;
+        color : gray;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > li > a > .fa:hover{
+        background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+        color:transparent;
+        -webkit-background-clip: text;
     }
 
     #navbarNavAltMarkup > .navbar-nav > a{            /*change navbar links sizes*/
-        font-size: 16px;
-        letter-spacing: 0.08em;
+        color: grey;
+        font-size: 18px;
+        font-family: 'Kumbh Sans', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
     }
 
-    .container_nav1 > nav > .font_appease{              /*adjust font*/
-        letter-spacing: 0.15em;
-        font-size: 24px;
+    #navbarNavAltMarkup > .navbar-nav > a:hover{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, orange, #d40d59, #772dcc, blue);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
     }
-    .nav-item1, .nav-item2, .nav-item3, .nav-item4, .nav-item5, .nav-item6{  /*adjust margin between a*/
-        margin-right: 8px;
+
+    .nav-item1{
+        margin-top:0px;
+    }
+
+    .nav-item6{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        font-size: 18px;
+        letter-spacing: 0.06em;
+        font-family: 'Kumbh Sans', sans-serif;
+        border: none;  !important;
+        outline: none !important;
+        margin-bottom:10px;
+    }
+
+    .nav-item6:hover{
+        font-size: 17px;
+        background-color: #f3ec78;
+        /*background-image: linear-gradient(#ffA500);*/
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        margin-bottom:10px;
+        border: none !important;
+        outline: none !important;
+    }
+
+    .nav-item7{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        font-size: 18px;
+        letter-spacing: 0.06em;
+        font-family: 'Kumbh Sans', sans-serif;
+        border: none;
+    }
+
+    .nav-item7:hover{
+        font-size: 17px;
+        background-color: #f3ec78;
+        /*background-image: linear-gradient(#ffA500);*/
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+
+    .container_nav1 > nav > .font_appease{
+        letter-spacing: 0.15em;
+        color:#fa2871;
+        font-family: 'PT Mono', monospace;
+        font-size: 24px;
+        display: inline-block;
+    }
+
+    .container_nav1 > nav > .font_appease:hover{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+    .nav-item1, .nav-item2, .nav-item3, .nav-item4, .nav-item5, .nav-item6{
+        margin-right: 14px;
     }
 }
 
 @media screen and (min-width: 1200px){
-    #navbarNavAltMarkup > .navbar_adjust{
-        position: relative;
-        left: 330px;
+    /*#navbarNavAltMarkup > .navbar_adjust{*/
+    /*    position: relative;*/
+    /*    left: 330px;*/
+    /*}*/
+
+    /*#navbarNavAltMarkup{*/
+    /*    background-color:#f8f9fa;*/
+    /*}*/
+
+    /*#navbarNavAltMarkup > .navbar-nav > li > a > .fa{*/
+    /*    font-size: 24px;*/
+    /*}*/
+
+    /*#navbarNavAltMarkup > .navbar-nav > a{            !*change navbar links sizes*!*/
+    /*    font-size: 16px;*/
+    /*    letter-spacing: 0.08em;*/
+    /*}*/
+
+    /*.container_nav1 > nav > .font_appease{              !*adjust font*!*/
+    /*    letter-spacing: 0.15em;*/
+    /*    font-size: 24px;*/
+    /*}*/
+    /*.nav-item1, .nav-item2, .nav-item3, .nav-item4, .nav-item5, .nav-item6{  !*adjust margin between a*!*/
+    /*    margin-right: 8px;*/
+    /*}*/
+    #navbarNavAltMarkup{
+        /*background-color:#252B34;*/
+        background-color: #f8f9fa;
+        opacity: 0.8;
     }
 
-    #navbarNavAltMarkup{
-        background-color:#f8f9fa;
+    #navbarNavAltMarkup > .navbar_adjust{
+        position: relative;
+        left: 220px;
+        top: 10px;
     }
 
     #navbarNavAltMarkup > .navbar-nav > li > a > .fa{
-        font-size: 24px;
+        font-size: 25px;
+        color : gray;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > li > a > .fa:hover{
+        background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+        color:transparent;
+        -webkit-background-clip: text;
     }
 
     #navbarNavAltMarkup > .navbar-nav > a{            /*change navbar links sizes*/
-        font-size: 16px;
-        letter-spacing: 0.08em;
+        color: grey;
+        font-size: 18px;
+        font-family: 'Kumbh Sans', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
     }
 
-    .container_nav1 > nav > .font_appease{              /*adjust font*/
-        letter-spacing: 0.15em;
-        font-size: 24px;
+    #navbarNavAltMarkup > .navbar-nav > a:hover{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, orange, #d40d59, #772dcc, blue);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
     }
-    .nav-item1, .nav-item2, .nav-item3, .nav-item4, .nav-item5, .nav-item6{  /*adjust margin between a*/
-        margin-right: 8px;
+
+    .nav-item1{
+        margin-top:0px;
+    }
+
+    .nav-item6{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        font-size: 18px;
+        letter-spacing: 0.06em;
+        font-family: 'Kumbh Sans', sans-serif;
+        border: none;  !important;
+        outline: none !important;
+        margin-bottom:10px;
+    }
+
+    .nav-item6:hover{
+        font-size: 17px;
+        background-color: #f3ec78;
+        /*background-image: linear-gradient(#ffA500);*/
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        margin-bottom:10px;
+        border: none !important;
+        outline: none !important;
+    }
+
+    .nav-item7{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        font-size: 18px;
+        letter-spacing: 0.06em;
+        font-family: 'Kumbh Sans', sans-serif;
+        border: none;
+    }
+
+    .nav-item7:hover{
+        font-size: 17px;
+        background-color: #f3ec78;
+        /*background-image: linear-gradient(#ffA500);*/
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+
+    .container_nav1 > nav >.font_appease{
+        letter-spacing: 0.15em;
+        color:#fa2871;
+        font-family: 'PT Mono', monospace;
+        font-size: 24px;
+        display: inline-block;
+    }
+
+    .container_nav1 > nav > .font_appease:hover{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+    .nav-item1, .nav-item2, .nav-item3, .nav-item4, .nav-item5, .nav-item6{
+        margin-right: 14px;
     }
 }
 
 @media screen and (min-width: 1250px){
-    #navbarNavAltMarkup > .navbar_adjust{
-        position: relative;
-        left: 370px;
-    }
+    /*#navbarNavAltMarkup > .navbar_adjust{*/
+    /*    position: relative;*/
+    /*    left: 370px;*/
+    /*}*/
+
+    /*#navbarNavAltMarkup{*/
+    /*    background-color:#f8f9fa;*/
+    /*}*/
+
+    /*#navbarNavAltMarkup > .navbar-nav > li > a > .fa{*/
+    /*    font-size: 24px;*/
+    /*}*/
+
+    /*#navbarNavAltMarkup > .navbar-nav > a{            !*change navbar links sizes*!*/
+    /*    font-size: 16px;*/
+    /*    letter-spacing: 0.08em;*/
+    /*}*/
+
+    /*.container_nav1 > nav > .font_appease{              !*adjust font*!*/
+    /*    letter-spacing: 0.15em;*/
+    /*    font-size: 24px;*/
+    /*}*/
+    /*.nav-item1, .nav-item2, .nav-item3, .nav-item4, .nav-item5, .nav-item6{  !*adjust margin between a*!*/
+    /*    margin-right: 8px;*/
+    /*}*/
 
     #navbarNavAltMarkup{
-        background-color:#f8f9fa;
+        /*background-color:#252B34;*/
+        background-color: #f8f9fa;
+        opacity: 0.8;
+    }
+
+    #navbarNavAltMarkup > .navbar_adjust{
+        position: relative;
+        left: 280px;
+        top: 10px;
     }
 
     #navbarNavAltMarkup > .navbar-nav > li > a > .fa{
-        font-size: 24px;
+        font-size: 25px;
+        color : gray;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > li > a > .fa:hover{
+        background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+        color:transparent;
+        -webkit-background-clip: text;
     }
 
     #navbarNavAltMarkup > .navbar-nav > a{            /*change navbar links sizes*/
-        font-size: 16px;
-        letter-spacing: 0.08em;
+        color: grey;
+        font-size: 18px;
+        font-family: 'Kumbh Sans', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
     }
 
-    .container_nav1 > nav > .font_appease{              /*adjust font*/
-        letter-spacing: 0.15em;
-        font-size: 24px;
+    #navbarNavAltMarkup > .navbar-nav > a:hover{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, orange, #d40d59, #772dcc, blue);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
     }
-    .nav-item1, .nav-item2, .nav-item3, .nav-item4, .nav-item5, .nav-item6{  /*adjust margin between a*/
-        margin-right: 8px;
+
+    .nav-item1{
+        margin-top:0px;
+    }
+
+    .nav-item6{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        font-size: 18px;
+        letter-spacing: 0.06em;
+        font-family: 'Kumbh Sans', sans-serif;
+        border: none;  !important;
+        outline: none !important;
+        margin-bottom:10px;
+    }
+
+    .nav-item6:hover{
+        font-size: 17px;
+        background-color: #f3ec78;
+        /*background-image: linear-gradient(#ffA500);*/
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        margin-bottom:10px;
+        border: none !important;
+        outline: none !important;
+    }
+
+    .nav-item7{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        font-size: 18px;
+        letter-spacing: 0.06em;
+        font-family: 'Kumbh Sans', sans-serif;
+        border: none;
+    }
+
+    .nav-item7:hover{
+        font-size: 17px;
+        background-color: #f3ec78;
+        /*background-image: linear-gradient(#ffA500);*/
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+
+    .container_nav1 > nav > .font_appease{
+        letter-spacing: 0.15em;
+        color:#fa2871;
+        font-family: 'PT Mono', monospace;
+        font-size: 24px;
+        display: inline-block;
+    }
+
+    .container_nav1 > nav > .font_appease:hover{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+    .nav-item1, .nav-item2, .nav-item3, .nav-item4, .nav-item5, .nav-item6{
+        margin-right: 20px;
     }
 }
 
 @media screen and (min-width: 1300px){
+    /*#navbarNavAltMarkup > .navbar_adjust{*/
+    /*    position: relative;*/
+    /*    left: 420px;*/
+    /*}*/
+    #navbarNavAltMarkup{
+        /*background-color:#252B34;*/
+        background-color: #f8f9fa;
+        opacity: 0.8;
+    }
+
     #navbarNavAltMarkup > .navbar_adjust{
         position: relative;
-        left: 420px;
+        left: 310px;
+        top: 10px;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > li > a > .fa{
+        font-size: 25px;
+        color : gray;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > li > a > .fa:hover{
+        background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+        color:transparent;
+        -webkit-background-clip: text;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > a{            /*change navbar links sizes*/
+        color: grey;
+        font-size: 18px;
+        font-family: 'Kumbh Sans', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > a:hover{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, orange, #d40d59, #772dcc, blue);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+    .nav-item1{
+        margin-top:0px;
+    }
+
+    .nav-item6{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        font-size: 18px;
+        letter-spacing: 0.06em;
+        font-family: 'Kumbh Sans', sans-serif;
+        border: none;  !important;
+        outline: none !important;
+        margin-bottom:10px;
+    }
+
+    .nav-item6:hover{
+        font-size: 17px;
+        background-color: #f3ec78;
+        /*background-image: linear-gradient(#ffA500);*/
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        margin-bottom:10px;
+        border: none !important;
+        outline: none !important;
+    }
+
+    .nav-item7{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        font-size: 18px;
+        letter-spacing: 0.06em;
+        font-family: 'Kumbh Sans', sans-serif;
+        border: none;
+    }
+
+    .nav-item7:hover{
+        font-size: 17px;
+        background-color: #f3ec78;
+        /*background-image: linear-gradient(#ffA500);*/
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+
+    .container_nav1 > nav > .font_appease{
+        letter-spacing: 0.15em;
+        color:#fa2871;
+        font-family: 'PT Mono', monospace;
+        font-size: 24px;
+        display: inline-block;
+    }
+
+    .container_nav1 > nav > .font_appease:hover{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+    .nav-item1, .nav-item2, .nav-item3, .nav-item4, .nav-item5, .nav-item6{
+        margin-right: 20px;
     }
 }
 
 @media screen and (min-width: 1350px){
+    /*#navbarNavAltMarkup > .navbar_adjust{*/
+    /*    position: relative;*/
+    /*    left: 480px;*/
+    /*}*/
+
+    #navbarNavAltMarkup{
+        /*background-color:#252B34;*/
+        background-color: #f8f9fa;
+        opacity: 0.8;
+    }
+
     #navbarNavAltMarkup > .navbar_adjust{
         position: relative;
-        left: 480px;
+        left: 350px;
+        top: 10px;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > li > a > .fa{
+        font-size: 25px;
+        color : gray;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > li > a > .fa:hover{
+        background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+        color:transparent;
+        -webkit-background-clip: text;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > a{            /*change navbar links sizes*/
+        color: grey;
+        font-size: 18px;
+        font-family: 'Kumbh Sans', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > a:hover{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, orange, #d40d59, #772dcc, blue);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+    .nav-item1{
+        margin-top:0px;
+    }
+
+    .nav-item6{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        font-size: 18px;
+        letter-spacing: 0.06em;
+        font-family: 'Kumbh Sans', sans-serif;
+        border: none;  !important;
+        outline: none !important;
+        margin-bottom:10px;
+    }
+
+    .nav-item6:hover{
+        font-size: 17px;
+        background-color: #f3ec78;
+        /*background-image: linear-gradient(#ffA500);*/
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        margin-bottom:10px;
+        border: none !important;
+        outline: none !important;
+    }
+
+    .nav-item7{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        font-size: 18px;
+        letter-spacing: 0.06em;
+        font-family: 'Kumbh Sans', sans-serif;
+        border: none;
+    }
+
+    .nav-item7:hover{
+        font-size: 17px;
+        background-color: #f3ec78;
+        /*background-image: linear-gradient(#ffA500);*/
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+
+    .container_nav1 > nav > .font_appease{
+        letter-spacing: 0.15em;
+        color:#fa2871;
+        font-family: 'PT Mono', monospace;
+        font-size: 24px;
+        display: inline-block;
+    }
+
+    .container_nav1 > nav > .font_appease:hover{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+    .nav-item1, .nav-item2, .nav-item3, .nav-item4, .nav-item5, .nav-item6{
+        margin-right: 20px;
     }
 }
 
 @media screen and (min-width: 1400px){
+    /*#navbarNavAltMarkup > .navbar_adjust{*/
+    /*    position: relative;*/
+    /*    left: 530px;*/
+    /*}*/
+
+    #navbarNavAltMarkup{
+        /*background-color:#252B34;*/
+        background-color: #f8f9fa;
+        opacity: 0.8;
+    }
+
     #navbarNavAltMarkup > .navbar_adjust{
         position: relative;
-        left: 530px;
+        left: 400px;
+        top: 10px;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > li > a > .fa{
+        font-size: 25px;
+        color : gray;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > li > a > .fa:hover{
+        background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+        color:transparent;
+        -webkit-background-clip: text;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > a{            /*change navbar links sizes*/
+        color: grey;
+        font-size: 18px;
+        font-family: 'Kumbh Sans', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > a:hover{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, orange, #d40d59, #772dcc, blue);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+    .nav-item1{
+        margin-top:0px;
+    }
+
+    .nav-item6{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        font-size: 18px;
+        letter-spacing: 0.06em;
+        font-family: 'Kumbh Sans', sans-serif;
+        border: none;  !important;
+        outline: none !important;
+        margin-bottom:10px;
+    }
+
+    .nav-item6:hover{
+        font-size: 17px;
+        background-color: #f3ec78;
+        /*background-image: linear-gradient(#ffA500);*/
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        margin-bottom:10px;
+        border: none !important;
+        outline: none !important;
+    }
+
+    .nav-item7{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        font-size: 18px;
+        letter-spacing: 0.06em;
+        font-family: 'Kumbh Sans', sans-serif;
+        border: none;
+    }
+
+    .nav-item7:hover{
+        font-size: 17px;
+        background-color: #f3ec78;
+        /*background-image: linear-gradient(#ffA500);*/
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+
+    .container_nav1 > nav > .font_appease{
+        letter-spacing: 0.15em;
+        color:#fa2871;
+        font-family: 'PT Mono', monospace;
+        font-size: 24px;
+        display: inline-block;
+    }
+
+    .container_nav1 > nav > .font_appease:hover{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+    .nav-item1, .nav-item2, .nav-item3, .nav-item4, .nav-item5, .nav-item6{
+        margin-right: 20px;
     }
 }
 
 @media screen and (min-width: 1450px){
+    /*#navbarNavAltMarkup > .navbar_adjust{*/
+    /*    position: relative;*/
+    /*    left: 580px;*/
+    /*}*/
+    #navbarNavAltMarkup{
+        /*background-color:#252B34;*/
+        background-color: #f8f9fa;
+        opacity: 0.8;
+    }
+
     #navbarNavAltMarkup > .navbar_adjust{
         position: relative;
-        left: 580px;
+        left: 450px;
+        top: 10px;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > li > a > .fa{
+        font-size: 25px;
+        color : gray;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > li > a > .fa:hover{
+        background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+        color:transparent;
+        -webkit-background-clip: text;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > a{            /*change navbar links sizes*/
+        color: grey;
+        font-size: 18px;
+        font-family: 'Kumbh Sans', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > a:hover{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, orange, #d40d59, #772dcc, blue);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+    .nav-item1{
+        margin-top:0px;
+    }
+
+    .nav-item6{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        font-size: 18px;
+        letter-spacing: 0.06em;
+        font-family: 'Kumbh Sans', sans-serif;
+        border: none;  !important;
+        outline: none !important;
+        margin-bottom:10px;
+    }
+
+    .nav-item6:hover{
+        font-size: 17px;
+        background-color: #f3ec78;
+        /*background-image: linear-gradient(#ffA500);*/
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        margin-bottom:10px;
+        border: none !important;
+        outline: none !important;
+    }
+
+    .nav-item7{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        font-size: 18px;
+        letter-spacing: 0.06em;
+        font-family: 'Kumbh Sans', sans-serif;
+        border: none;
+    }
+
+    .nav-item7:hover{
+        font-size: 17px;
+        background-color: #f3ec78;
+        /*background-image: linear-gradient(#ffA500);*/
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+
+    .container_nav1 > nav > .font_appease{
+        letter-spacing: 0.15em;
+        color:#fa2871;
+        font-family: 'PT Mono', monospace;
+        font-size: 24px;
+        display: inline-block;
+    }
+
+    .container_nav1 > nav > .font_appease:hover{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+    .nav-item1, .nav-item2, .nav-item3, .nav-item4, .nav-item5, .nav-item6{
+        margin-right: 20px;
     }
 }
 
 @media screen and (min-width: 1500px){
+    /*    #navbarNavAltMarkup > .navbar_adjust{*/
+    /*        position: relative;*/
+    /*        left: 600px;*/
+    /*    }*/
+
+
+    #navbarNavAltMarkup{
+        /*background-color:#252B34;*/
+        background-color: #f8f9fa;
+        opacity: 0.8;
+    }
+
     #navbarNavAltMarkup > .navbar_adjust{
         position: relative;
-        left: 620px;
+        left: 500px;
+        top: 10px;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > li > a > .fa{
+        font-size: 25px;
+        color : gray;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > li > a > .fa:hover{
+        background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+        color:transparent;
+        -webkit-background-clip: text;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > a{            /*change navbar links sizes*/
+        color: grey;
+        font-size: 18px;
+        font-family: 'Kumbh Sans', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > a:hover{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, orange, #d40d59, #772dcc, blue);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+    .nav-item1{
+        margin-top:0px;
+    }
+
+    .nav-item6{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        font-size: 18px;
+        letter-spacing: 0.06em;
+        font-family: 'Kumbh Sans', sans-serif;
+        border: none;  !important;
+        outline: none !important;
+        margin-bottom:10px;
+    }
+
+    .nav-item6:hover{
+        font-size: 17px;
+        background-color: #f3ec78;
+        /*background-image: linear-gradient(#ffA500);*/
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        margin-bottom:10px;
+        border: none !important;
+        outline: none !important;
+    }
+
+    .nav-item7{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        font-size: 18px;
+        letter-spacing: 0.06em;
+        font-family: 'Kumbh Sans', sans-serif;
+        border: none;
+    }
+
+    .nav-item7:hover{
+        font-size: 17px;
+        background-color: #f3ec78;
+        /*background-image: linear-gradient(#ffA500);*/
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+
+    .container_nav1 > nav > .font_appease{
+        letter-spacing: 0.15em;
+        color:#fa2871;
+        font-family: 'PT Mono', monospace;
+        font-size: 24px;
+        display: inline-block;
+    }
+
+    .container_nav1 > nav > .font_appease:hover{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+    .nav-item1, .nav-item2, .nav-item3, .nav-item4, .nav-item5, .nav-item6{
+        margin-right: 20px;
     }
 }
 
+
+
 @media screen and (min-width: 1550px){
+    /*#navbarNavAltMarkup > .navbar_adjust{*/
+    /*    position: relative;*/
+    /*    left: 670px;*/
+    /*}*/
+
+    #navbarNavAltMarkup{
+        /*background-color:#252B34;*/
+        background-color: #f8f9fa;
+        opacity: 0.8;
+    }
+
     #navbarNavAltMarkup > .navbar_adjust{
         position: relative;
-        left: 670px;
+        left: 580px;
+        top: 10px;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > li > a > .fa{
+        font-size: 25px;
+        color : gray;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > li > a > .fa:hover{
+        background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+        color:transparent;
+        -webkit-background-clip: text;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > a{            /*change navbar links sizes*/
+        color: grey;
+        font-size: 18px;
+        font-family: 'Kumbh Sans', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > a:hover{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, orange, #d40d59, #772dcc, blue);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+    .nav-item1{
+        margin-top:0px;
+    }
+
+    .nav-item6{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        font-size: 18px;
+        letter-spacing: 0.06em;
+        font-family: 'Kumbh Sans', sans-serif;
+        border: none;  !important;
+        outline: none !important;
+        margin-bottom:10px;
+    }
+
+    .nav-item6:hover{
+        font-size: 17px;
+        background-color: #f3ec78;
+        /*background-image: linear-gradient(#ffA500);*/
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        margin-bottom:10px;
+        border: none !important;
+        outline: none !important;
+    }
+
+    .nav-item7{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        font-size: 18px;
+        letter-spacing: 0.06em;
+        font-family: 'Kumbh Sans', sans-serif;
+        border: none;
+    }
+
+    .nav-item7:hover{
+        font-size: 17px;
+        background-color: #f3ec78;
+        /*background-image: linear-gradient(#ffA500);*/
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+
+    .container_nav1 > nav > .font_appease{
+        letter-spacing: 0.15em;
+        color:#fa2871;
+        font-family: 'PT Mono', monospace;
+        font-size: 24px;
+        display: inline-block;
+    }
+
+    .container_nav1 > nav > .font_appease:hover{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+    .nav-item1, .nav-item2, .nav-item3, .nav-item4, .nav-item5, .nav-item6{
+        margin-right: 20px;
     }
 }
 
 @media screen and (min-width: 1600px){
+    /*#navbarNavAltMarkup > .navbar_adjust{*/
+    /*    position: relative;*/
+    /*    left: 720px;*/
+    /*}*/
+
+    #navbarNavAltMarkup{
+        /*background-color:#252B34;*/
+        background-color: #f8f9fa;
+        opacity: 0.8;
+    }
+
     #navbarNavAltMarkup > .navbar_adjust{
         position: relative;
-        left: 720px;
+        left: 630px;
+        top: 10px;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > li > a > .fa{
+        font-size: 25px;
+        color : gray;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > li > a > .fa:hover{
+        background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+        color:transparent;
+        -webkit-background-clip: text;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > a{            /*change navbar links sizes*/
+        color: grey;
+        font-size: 18px;
+        font-family: 'Kumbh Sans', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > a:hover{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, orange, #d40d59, #772dcc, blue);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+    .nav-item1{
+        margin-top:0px;
+    }
+
+    .nav-item6{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        font-size: 18px;
+        letter-spacing: 0.06em;
+        font-family: 'Kumbh Sans', sans-serif;
+        border: none;  !important;
+        outline: none !important;
+        margin-bottom:10px;
+    }
+
+    .nav-item6:hover{
+        font-size: 17px;
+        background-color: #f3ec78;
+        /*background-image: linear-gradient(#ffA500);*/
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        margin-bottom:10px;
+        border: none !important;
+        outline: none !important;
+    }
+
+    .nav-item7{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        font-size: 18px;
+        letter-spacing: 0.06em;
+        font-family: 'Kumbh Sans', sans-serif;
+        border: none;
+    }
+
+    .nav-item7:hover{
+        font-size: 17px;
+        background-color: #f3ec78;
+        /*background-image: linear-gradient(#ffA500);*/
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+
+    .container_nav1 > nav > .font_appease{
+        letter-spacing: 0.15em;
+        color:#fa2871;
+        font-family: 'PT Mono', monospace;
+        font-size: 24px;
+        display: inline-block;
+    }
+
+    .container_nav1 > nav > .font_appease:hover{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+
+    .nav-item1, .nav-item2, .nav-item3, .nav-item4, .nav-item5, .nav-item6{
+        margin-right: 20px;
     }
 }
 
 @media screen and (min-width: 1650px){
+    /*#navbarNavAltMarkup > .navbar_adjust{*/
+    /*    position: relative;*/
+    /*    left: 770px;*/
+    /*}*/
+
+    #navbarNavAltMarkup{
+        /*background-color:#252B34;*/
+        background-color: #f8f9fa;
+        opacity: 0.8;
+    }
+
     #navbarNavAltMarkup > .navbar_adjust{
         position: relative;
-        left: 770px;
+        left: 650px;
+        top: 10px;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > li > a > .fa{
+        font-size: 25px;
+        color : gray;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > li > a > .fa:hover{
+        background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+        color:transparent;
+        -webkit-background-clip: text;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > a{            /*change navbar links sizes*/
+        color: grey;
+        font-size: 18px;
+        font-family: 'Kumbh Sans', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > a:hover{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, orange, #d40d59, #772dcc, blue);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+    .nav-item1{
+        margin-top:0px;
+    }
+
+    .nav-item6{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        font-size: 18px;
+        letter-spacing: 0.06em;
+        font-family: 'Kumbh Sans', sans-serif;
+        border: none;  !important;
+        outline: none !important;
+        margin-bottom:10px;
+    }
+
+    .nav-item6:hover{
+        font-size: 17px;
+        background-color: #f3ec78;
+        /*background-image: linear-gradient(#ffA500);*/
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        margin-bottom:10px;
+        border: none !important;
+        outline: none !important;
+    }
+
+    .nav-item7{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        font-size: 18px;
+        letter-spacing: 0.06em;
+        font-family: 'Kumbh Sans', sans-serif;
+        border: none;
+    }
+
+    .nav-item7:hover{
+        font-size: 17px;
+        background-color: #f3ec78;
+        /*background-image: linear-gradient(#ffA500);*/
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+
+    .container_nav1 > nav > .font_appease{
+        letter-spacing: 0.15em;
+        color:#fa2871;
+        font-family: 'PT Mono', monospace;
+        font-size: 24px;
+        display: inline-block;
+    }
+
+    .container_nav1 > nav > .font_appease:hover{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+    .nav-item1, .nav-item2, .nav-item3, .nav-item4, .nav-item5, .nav-item6{
+        margin-right: 20px;
     }
 }
+
 
 @media screen and (min-width: 1700px){
+    /*#navbarNavAltMarkup > .navbar_adjust{*/
+    /*    position: relative;*/
+    /*    left: 850px;*/
+    /*}*/
+
+    #navbarNavAltMarkup{
+        /*background-color:#252B34;*/
+        background-color: #f8f9fa;
+        opacity: 0.8;
+    }
+
     #navbarNavAltMarkup > .navbar_adjust{
         position: relative;
-        left: 850px;
+        left: 712px;
+        top: 10px;
     }
+
+    #navbarNavAltMarkup > .navbar-nav > li > a > .fa{
+        font-size: 25px;
+        color : gray;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > li > a > .fa:hover{
+        background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+        color:transparent;
+        -webkit-background-clip: text;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > a{            /*change navbar links sizes*/
+        color: grey;
+        font-size: 18px;
+        font-family: 'Kumbh Sans', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > a:hover{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, orange, #d40d59, #772dcc, blue);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+    .nav-item1{
+        margin-top:0px;
+    }
+
+    .nav-item6{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        font-size: 18px;
+        letter-spacing: 0.06em;
+        font-family: 'Kumbh Sans', sans-serif;
+        border: none;  !important;
+        outline: none !important;
+        margin-bottom:10px;
+    }
+
+    .nav-item6:hover{
+        font-size: 17px;
+        background-color: #f3ec78;
+        /*background-image: linear-gradient(#ffA500);*/
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        margin-bottom:10px;
+        border: none !important;
+        outline: none !important;
+    }
+
+    .nav-item7{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        font-size: 18px;
+        letter-spacing: 0.06em;
+        font-family: 'Kumbh Sans', sans-serif;
+        border: none;
+    }
+
+    .nav-item7:hover{
+        font-size: 17px;
+        background-color: #f3ec78;
+        /*background-image: linear-gradient(#ffA500);*/
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+
+    .container_nav1 > nav > .font_appease{
+        letter-spacing: 0.15em;
+        color:#fa2871;
+        font-family: 'PT Mono', monospace;
+        font-size: 24px;
+        display: inline-block;
+    }
+
+    .container_nav1 > nav > .font_appease:hover{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+    .nav-item1, .nav-item2, .nav-item3, .nav-item4, .nav-item5, .nav-item6{
+        margin-right: 20px;
+    }
+
 }
 
+
 @media screen and (min-width: 1750px){
+    /*#navbarNavAltMarkup > .navbar_adjust{*/
+    /*    position: relative;*/
+    /*    left: 930px;*/
+    /*}*/
+
+
+    #navbarNavAltMarkup{
+        /*background-color:#252B34;*/
+        background-color: #f8f9fa;
+        opacity: 0.8;
+    }
+
     #navbarNavAltMarkup > .navbar_adjust{
         position: relative;
-        left: 930px;
+        left: 774px;
+        top: 10px;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > li > a > .fa{
+        font-size: 25px;
+        color : gray;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > li > a > .fa:hover{
+        background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+        color:transparent;
+        -webkit-background-clip: text;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > a{            /*change navbar links sizes*/
+        color: grey;
+        font-size: 18px;
+        font-family: 'Kumbh Sans', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > a:hover{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, orange, #d40d59, #772dcc, blue);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+    .nav-item1{
+        margin-top:0px;
+    }
+
+    .nav-item6{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        font-size: 18px;
+        letter-spacing: 0.06em;
+        font-family: 'Kumbh Sans', sans-serif;
+        border: none;  !important;
+        outline: none !important;
+        margin-bottom:10px;
+    }
+
+    .nav-item6:hover{
+        font-size: 17px;
+        background-color: #f3ec78;
+        /*background-image: linear-gradient(#ffA500);*/
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        margin-bottom:10px;
+        border: none !important;
+        outline: none !important;
+    }
+
+    .nav-item7{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        font-size: 18px;
+        letter-spacing: 0.06em;
+        font-family: 'Kumbh Sans', sans-serif;
+        border: none;
+    }
+
+    .nav-item7:hover{
+        font-size: 17px;
+        background-color: #f3ec78;
+        /*background-image: linear-gradient(#ffA500);*/
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+
+    .container_nav1 > nav > .font_appease{
+        letter-spacing: 0.15em;
+        color:#fa2871;
+        font-family: 'PT Mono', monospace;
+        font-size: 24px;
+        display: inline-block;
+    }
+
+    .container_nav1 > nav > .font_appease:hover{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+
+    .nav-item1, .nav-item2, .nav-item3, .nav-item4, .nav-item5, .nav-item6{
+        margin-right: 20px;
     }
 }
 
 @media screen and (min-width: 1800px){
+    /*#navbarNavAltMarkup > .navbar_adjust{*/
+    /*    position: relative;*/
+    /*    left: 800px;*/
+    /*}*/
+
+    /*#navbarNavAltMarkup > .navbar-nav > li > a > .fa{*/
+    /*    font-size: 24px;*/
+    /*}*/
+
+    /*#navbarNavAltMarkup > .navbar-nav > a{            !*change navbar links sizes*!*/
+    /*    font-size: 20px;*/
+    /*    letter-spacing: 0.08em;*/
+    /*}*/
+
+    /*.nav-item1, .nav-item2, .nav-item3, .nav-item4, .nav-item5, .nav-item6{  !*adjust margin between a*!*/
+    /*    margin-right: 18px;*/
+    /*}*/
+
+
+
+    #navbarNavAltMarkup{
+        /*background-color:#252B34;*/
+        background-color: #f8f9fa;
+        opacity: 0.8;
+    }
+
     #navbarNavAltMarkup > .navbar_adjust{
         position: relative;
-        left: 800px;
+        left: 900px;
+        top: 10px;
     }
 
     #navbarNavAltMarkup > .navbar-nav > li > a > .fa{
-        font-size: 24px;
+        font-size: 25px;
+        color : gray;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > li > a > .fa:hover{
+        background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+        color:transparent;
+        -webkit-background-clip: text;
     }
 
     #navbarNavAltMarkup > .navbar-nav > a{            /*change navbar links sizes*/
-        font-size: 20px;
-        letter-spacing: 0.08em;
+        color: grey;
+        font-size: 18px;
+        font-family: 'Kumbh Sans', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
     }
 
-    .nav-item1, .nav-item2, .nav-item3, .nav-item4, .nav-item5, .nav-item6{  /*adjust margin between a*/
-        margin-right: 18px;
+    #navbarNavAltMarkup > .navbar-nav > a:hover{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, orange, #d40d59, #772dcc, blue);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+    .nav-item1{
+        margin-top:0px;
+    }
+
+    .nav-item6{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        font-size: 18px;
+        letter-spacing: 0.06em;
+        font-family: 'Kumbh Sans', sans-serif;
+        border: none;  !important;
+        outline: none !important;
+        margin-bottom:10px;
+    }
+
+    .nav-item6:hover{
+        font-size: 17px;
+        background-color: #f3ec78;
+        /*background-image: linear-gradient(#ffA500);*/
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        margin-bottom:10px;
+        border: none !important;
+        outline: none !important;
+    }
+
+    .nav-item7{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        font-size: 18px;
+        letter-spacing: 0.06em;
+        font-family: 'Kumbh Sans', sans-serif;
+        border: none;
+    }
+
+    .nav-item7:hover{
+        font-size: 17px;
+        background-color: #f3ec78;
+        /*background-image: linear-gradient(#ffA500);*/
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+
+    .container_nav1 > nav > .font_appease{
+        letter-spacing: 0.15em;
+        color:#fa2871;
+        font-family: 'PT Mono', monospace;
+        font-size: 24px;
+        display: inline-block;
+    }
+
+    .container_nav1 > nav > .font_appease:hover{
+        background-color: #f3ec78;
+        background-image: linear-gradient(45deg, blue, #772dcc, #d40d59, orange);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        /*-moz-background-clip: text;*/
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+    .nav-item1, .nav-item2, .nav-item3, .nav-item4, .nav-item5, .nav-item6{
+        margin-right: 20px;
     }
 }
 /********** MEDIA QUERY (MIN-WIDTH) [END] *********/
 
 /******** MEDIA QUERY (MAX-WIDTH) [START] *********/
+@media screen and (max-width: 991px){
+
+    .container_nav1 > nav > .font_appease{
+        letter-spacing: 0.15em;
+        color: #fa2871;
+        font-family: 'PT Mono', monospace;
+        font-size: 24px;
+        display: block;
+    }
+
+    .nav-item1{
+        margin-top:100px;
+    }
+
+    #navbarNavAltMarkup > .navbar_adjust{
+        position: relative;
+        left: 0px;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > li > a > .fa{
+        font-size: 48px;
+        color : gray;
+        margin-bottom: 80px;
+    }
+
+    #navbarNavAltMarkup > .navbar-nav > a{
+        color: grey;
+        font-size: 30px;
+        font-family: 'Kumbh Sans', sans-serif;
+        margin-bottom: 90px;
+        text-transform: uppercase;
+    }
+
+    .nav-item6{             /*LOGOUT*/
+        font-size: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 50px;
+        margin-top: 10px;
+    }
+
+    .nav-item6:hover{      /*LOGOUT:HOVER*/
+        font-size: 28px;
+        margin-bottom: 50px;
+        margin-top: 10px;
+    }
+
+    .nav-item7{             /*LOGIN*/
+        text-align: center;
+        font-size: 30px;
+        margin-top: 10px;
+        margin-bottom: 110px;
+    }
+
+    .nav-item7:hover{       /*LOGIN:HOVER*/
+        font-size: 28px;
+        margin-top: 10px;
+        margin-bottom: 110px;
+    }
+
+}
 
 @media screen and (max-width: 408px){
 
@@ -435,7 +2692,7 @@
         letter-spacing: 0.15em;
         color:#fa2871;
         font-family: 'PT Mono', monospace;
-        font-size: 24px;
+        font-size: 2px;
         display: none;
     }
 
@@ -491,61 +2748,10 @@
 }
 
 
-@media screen and (max-width: 991px){
 
-    .nav-item1{
-        margin-top:100px;
-    }
-
-    #navbarNavAltMarkup > .navbar_adjust{
-        position: relative;
-        left: 0px;
-    }
-
-    #navbarNavAltMarkup > .navbar-nav > li > a > .fa{
-        font-size: 48px;
-        color : gray;
-        margin-bottom: 50px;
-    }
-
-    #navbarNavAltMarkup > .navbar-nav > a{
-        color: grey;
-        font-size: 30px;
-        font-family: 'Kumbh Sans', sans-serif;
-        margin-bottom: 45px;
-        text-transform: uppercase;
-    }
-
-    .nav-item6{             /*LOGOUT*/
-        font-size: 30px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 50px;
-        margin-top: 10px;
-    }
-
-    .nav-item6:hover{      /*LOGOUT:HOVER*/
-        font-size: 28px;
-        margin-bottom: 50px;
-        margin-top: 10px;
-    }
-
-    .nav-item7{             /*LOGIN*/
-        text-align: center;
-        font-size: 30px;
-        margin-top: 10px;
-        margin-bottom: 110px;
-    }
-
-    .nav-item7:hover{       /*LOGIN:HOVER*/
-        font-size: 28px;
-        margin-top: 10px;
-        margin-bottom: 110px;
-    }
-}
 /******** MEDIA QUERY (MAX-WIDTH) [END] ***********/
 /*****************MEDIA QUERY NAVBAR (END)*******************/
-/*-----------------------------------(end)FreeIslandwide css -----------------------------*/
+/*-------------------------------------(end)NAVBAR css ----------------------------------*/
 
 /*----------------------------------(start) SHOPPING CART FONT ---------------------------------*/
 .container_shopcarttitle{
@@ -565,7 +2771,9 @@
     max-width: 30%;
 }
 /*---------------------------------------(end) Checkout FORM -----------------------------------*/
-
+#checkout_font{
+    font-family: 'Montserrat', sans-serif;
+}
 /*-----------------------------------------(start)CART TOTAL -----------------------------------*/
 .price1{
     /* letter-spacing: 0.01em; */
@@ -574,6 +2782,7 @@
     letter-spacing: 0.03em;
 }
 /*-------------------------------------------(end)CART TOTAL -----------------------------------*/
+
 
 
 /*---------------------------------------(start) Footer-------------------------------------*/

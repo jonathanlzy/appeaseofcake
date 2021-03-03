@@ -1,0 +1,95 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--------------------------------------- Bootstrap CSS --------------------------------------->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!--Gooogle fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+
+    <!--Animate on scroll-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!--Font Awesome CDN-->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!--load all styles -->
+
+    <!-- stylesheet main_page -->
+    <link rel="stylesheet" type="text/css" href="/css/charge_result.css" media="screen" />
+    <title>Payment</title>
+</head>
+<body>
+<!--<div th:insert="fragments/h.html :: header"></div>-->
+
+<div class="container-fluid container_0" style="height:26px; overflow-y: hidden;">
+    <p id="free_deliv_font">Free island-wide delivery for orders above $150</p>
+</div>
+<!-----------------------------------------------------navigation (start)---------------------------------------------------------->
+<!----------------------------------------------------------navigation (end)--------------------------------------------------------->
+<!--<nav th:fragment="navbar" class="navbar navbar-expand-lg navbar-light bg-light nav_container" style="line-height: 41px;">-->
+<div class="container-fluid container_nav1 bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light nav_container" style="line-height: 26px; overflow-y: hidden; overflow-x: hidden;">
+        <a href="index">
+            <img src="/images/appeaseofcake_monosingle.png" width="54px" height="48px" alt="company logo">
+        </a>
+        <a class="navbar-brand font_appease" href="index">appeaseofcake</a>
+        <button class="navbar-toggler ml-auto"   type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse"  id="navbarNavAltMarkup">
+            <div class="navbar-nav navbar_adjust mb-3">
+                <a class="nav-item1 nav-link text-center" href ="/cakes">Cakes</a>
+                <a class="nav-item2 nav-link text-center" href="/about_us">About</a>
+                <a class="nav-item3 nav-link text-center" href="/contact_us">Contact</a>
+                <li class="text-center nav-item4 pl-3 pr-3 pt-2"><a id="shopping_cart_icon" href="cakes_cart"><i class="fa fa-shopping-cart fa text-center"></i></a></li>
+                <a class="nav-item5 nav-link text-center" href="register">Register</a>
+                <a class="nav-item3 nav-link text-center" href="/login">LOGIN</a>
+<!--                <li class="nav-item6" th:fragment="login" sec:authorize="isAuthenticated()">-->
+<!--                    <form th:action="@{/logout}" method="post">-->
+<!--                        <input type="submit" class="nav-item6 nav-link active text-center" value="LOGOUT"/>-->
+<!--                    </form>-->
+<!--                </li>-->
+<!--                <div sec:authorize="isAnonymous()">-->
+<!--                    <a class="nav-item7 nav-link active text-center"  href="/login">LOGIN</a>-->
+<!--                    </p>-->
+<!--                </div>-->
+<!--                </li>-->
+                <!--                <a class="nav-item6 nav-link active text-center" href="/login">Login</a>-->
+            </div>
+        </div>
+    </nav>
+</div>
+<div class="container-fluid text-center" style="display: flex; justify-content: center; padding: 100px;">
+<!--<h3 th:if='${error}' th:text='${error}' style='color: red;'>Payment Fail</h3>-->
+<!--<div th:unless='${error}'>-->
+<!--    <h3 style='color: green;'>Payment Success</h3>-->
+<!--    <div>Id.: <span th:text='${id}' /></div>-->
+<!--    <div>Status: <span th:text='${status}' /></div>-->
+<!--    <div>Charge id.: <span th:text='${chargeId}' /></div>-->
+<!--    <div>Balance transaction id.: <span th:text='${balance_transaction}' /></div>-->
+              <h3 th:if='${error}' th:text='${error}' style='color: red;'>Payment Fail</h3>
+              <div th:unless='${error}'>
+                  <h3 style='color: green;'>Payment Successful</h3>
+                  <div>Payment id : <span th:text='${id}' /></div>
+                  <br><br>
+              <p class="text-center lead mb-5">Thank you for shopping with us.</p>
+                <div class="text-center"><a href="/cakes" class="btn btn-primary btn-large">Continue Shopping</a></div>
+          </div>
+</div>
+</div>
+<div th:insert="fragments/footer.html :: footer"></div>
+</body>
+</html>

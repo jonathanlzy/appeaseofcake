@@ -13,5 +13,5 @@ public interface UserServiceInterface {
     List<User> getAllUsers();
 
     //an abstract method to get the current user - who is logged in
-    User current_user(String name);
+    User current_user(String username);
 }

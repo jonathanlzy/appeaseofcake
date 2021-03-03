@@ -43,9 +43,10 @@ public class UserServiceImpl implements UserServiceInterface{
     }
 
     @Override
-    public User current_user(String name) {
-        System.out.println(name);
-        User u = userRepo.findByUsername(name);
+    public User current_user(String username) {
+//        System.out.println(email);
+//        User u = userRepo.findByEmail(email);
+        User u = userRepo.findByUsername(username);
         System.out.println(u);
         System.out.println(u.getId());
         System.out.println(u.getUsername());

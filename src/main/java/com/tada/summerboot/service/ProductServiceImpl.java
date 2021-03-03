@@ -77,7 +77,8 @@ public class ProductServiceImpl implements ProductServiceInterface{
 
     @Override
     public List<Product> findAllByUserId(Integer id) {
-        return productRepo.findAllProductsByUserId(id);
+        return  null;
+//        return productRepo.findAllProductsByUserId(id);
     }
 
 }

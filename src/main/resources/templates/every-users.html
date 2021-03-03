@@ -1,70 +1,277 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
-
 <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>All Users</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!----------------------------------------------------- Bootstrap CSS -------------------------------------------------------->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--Gooogle fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
+    <!--Animate on scroll-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!--Font Awesome CDN-->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!--load all styles -->
+    <!-- stylesheet main_page -->
+    <!--    <link rel="stylesheet" type="text/css" href="css/#.css" media="screen" />-->
+    <title>USERS LOG</title>
+    <style>
+        body{
+            margin:0;
+            padding:20px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        *{
+            box-sizing: border-box;
+        }
+        .table{
+            width:100%;
+            border-collapse: collapse;
+        }
+        .table td, .table th{
+            padding:12px 15px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        .table th{
+            background-color: #343346;
+            color: #ffffff;
+        }
+        .table tbody tr:nth-child(even){
+            background-color: #f5f5f5;
+        }
+        .delete_font{
+            font-weight: bolder;
+        }
+        #adduser_font, #backtoindex_font, #backtouserslog_font, #backtoadmin_font{
+            font-family: 'Montserrat', sans-serif;
+        }
+        #backtoindex_font, #backtouserslog_font{
+            margin-right: 30px;
+        }
+            /*media query tables users log*/
+        @media(max-width: 1035px){
+            .table thead{
+                display: none;
+            }
+            .table, .table tbody, .table tr, .table td{
+                display: block;
+                width: 100%;
+            }
+            .table tr{
+                margin-bottom: 15px;
+            }
+            .table td{
+                text-align: center;
+                padding-left: 0%;
+                text-align: right;
+                position: relative;
+            }
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+            .table td::before{
+                content: attr(data-label);
+                position: absolute;
+                left:0;
+                width: 50%;
+                padding-left: 15px;
+                font-size: 15px;
+                font-weight: bold;
+                text-align: left;
+            }
+        }
+    </style>
 </head>
-
 <body>
 <div th:switch="${users}">
     <p>
-        <a href="/register">
+        <a id="adduser_font" href="/register">
             <i> Add User </i></a>
     </p>
     <div>
-        <h2 th:case="null">No record found !!</h2>
-
+        <div class="container-fluid text-center" style="align-items: center;">
+            <h2 th:case="null">User have been removed!</h2>
+        </div>
         <div th:case="*">
-            <table>
+            <table class="table">
                 <thead>
                 <tr>
+                    <th>Id</th>
                     <th>Email</th>
-                    <th>Username</th>
                     <th>Password</th>
                     <th>Usertype</th>
-
-                    <th>Show</th>
-                    <th>Edit</th>
+                    <th>Username</th>
+                    <th>Address</th>
+                    <th>Retype Password</th>
+                    <th>Telephone</th>
+                    <th>Postal</th>
+                    <th>Unit</th>
+                    <!--                    <th>Show</th>-->
+                    <!--                    <th>Edit</th>-->
                     <th>Delete</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr th:each="user : ${users}">
-                    <td th:text="${user.email}"></td>
-                    <td th:text="${user.username}"></td>
-                    <td th:text="${user.password}"></td>
-                    <td th:text="${user.userType}"></td>
-
-                    <td>
-                        <a th:href="@{user/show/{id}(id=${user.id})}">
-                            Show
-                        </a>
-                    </td>
-
-                    <td>
-                        <a th:href="@{user/edit/{id}(id=${user.id})}">
-                            Edit
-                        </a>
-                    </td>
-                    <td>
-                        <a th:href="@{user/delete/{id}(id=${user.id})}" class="btn btn-primary">
+                    <td data-label="Id" th:text="${user.id}"></td>
+                    <td data-label="Email" th:text="${user.email}"></td>
+                    <td data-label="Password" th:text="${user.password}"></td>
+                    <td data-label="Usertype" th:text="${user.userType}"></td>
+                    <td data-label="Username" th:text="${user.username}"></td>
+                    <td data-label="Address" th:text="${user.address}"></td>
+                    <td data-label="Retype Password" th:text="${user.retype_password}"></td>
+                    <td data-label="Telephone" th:text="${user.telephone}"></td>
+                    <td data-label="Postal" th:text="${user.postal}"></td>
+                    <td data-label="Unit" th:text="${user.unit}"></td>
+                    <!--                    <td>-->
+                    <!--                        <a th:href="@{user/show/{id}(id=${user.id})}">-->
+                    <!--                            Show-->
+                    <!--                        </a>-->
+                    <!--                    </td>-->
+                    <!--                    <td>-->
+                    <!--                        <a th:href="@{user/edit/{id}(id=${user.id})}">-->
+                    <!--                            Edit-->
+                    <!--                        </a>-->
+                    <!--                    </td>-->
+                    <td data-label="Delete">
+                        <a th:href="@{user/delete/{id}(id=${user.id})}" class="btn btn-danger delete_font">
                             Delete
                         </a>
                     </td>
                 </tr>
                 </tbody>
             </table>
-
         </div>
     </div>
 </div>
-
-<a href="/">Back to index</a>
-
+<a id="backtoindex_font" href="/">Back to index</a>
+<a id="backtouserslog_font" href="/every-users">Back to Users Log</a>
+<a id="backtoadmin_font" href="/admin">Back to Admin</a>
 </body>
-
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">-->
+
+<!--<head>-->
+<!--    <meta charset="utf-8">-->
+<!--    <meta http-equiv="x-ua-compatible" content="ie=edge">-->
+<!--    <title>All Users</title>-->
+
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1">-->
+<!--</head>-->
+
+<!--<body>-->
+<!--<div th:switch="${users}">-->
+<!--    <p>-->
+<!--        <a href="/register">-->
+<!--            <i> Add User </i></a>-->
+<!--    </p>-->
+<!--    <div>-->
+<!--        <h2 th:case="null">No record found !!</h2>-->
+
+<!--        <div th:case="*">-->
+<!--            <table>-->
+<!--                <thead>-->
+<!--                <tr>-->
+<!--                    <th>Id</th>-->
+<!--                    <th>Email</th>-->
+<!--                    <th>Password</th>-->
+<!--                    <th>Usertype</th>-->
+<!--                    <th>Username</th>-->
+<!--                    <th>Address</th>-->
+<!--                    <th>Retype Password</th>-->
+<!--                    <th>Telephone</th>-->
+<!--                    <th>Postal</th>-->
+<!--                    <th>Unit</th>-->
+
+
+
+<!--                    <th>Show</th>-->
+<!--                    <th>Edit</th>-->
+<!--                    <th>Delete</th>-->
+<!--                </tr>-->
+<!--                </thead>-->
+<!--                <tbody>-->
+<!--                <tr th:each="user : ${users}">-->
+<!--                    <td th:text="${user.id}"></td>-->
+<!--                    <td th:text="${user.email}"></td>-->
+<!--                    <td th:text="${user.password}"></td>-->
+<!--                    <td th:text="${user.userType}"></td>-->
+<!--                    <td th:text="${user.username}"></td>-->
+<!--                    <td th:text="${user.address}"></td>-->
+<!--                    <td th:text="${user.retype_password}"></td>-->
+<!--                    <td th:text="${user.telephone}"></td>-->
+<!--                    <td th:text="${user.postal}"></td>-->
+<!--                    <td th:text="${user.unit}"></td>-->
+
+
+
+
+<!--                    <td>-->
+<!--                        <a th:href="@{user/show/{id}(id=${user.id})}">-->
+<!--                            Show-->
+<!--                        </a>-->
+<!--                    </td>-->
+
+<!--                    <td>-->
+<!--                        <a th:href="@{user/edit/{id}(id=${user.id})}">-->
+<!--                            Edit-->
+<!--                        </a>-->
+<!--                    </td>-->
+<!--                    <td>-->
+<!--                        <a th:href="@{user/delete/{id}(id=${user.id})}" class="btn btn-primary">-->
+<!--                            Delete-->
+<!--                        </a>-->
+<!--                    </td>-->
+<!--                </tr>-->
+<!--                </tbody>-->
+<!--            </table>-->
+
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--<a href="/">Back to index</a>-->
+
+<!--</body>-->
+
+<!--</html>-->

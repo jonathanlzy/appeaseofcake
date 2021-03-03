@@ -1,3 +1,4 @@
+
 /*--------------------------------(start)FreeIslandwide css ------------------------------*/
 
 .container-fluid {                     /* container of navigation bar, bs containers are padded, need to remove them*/
@@ -42,10 +43,10 @@
     opacity: 0.8;
 }
 
-#navbarNavAltMarkup > .navbar_adjust{
+.navbar_adjust{
     position: relative;
     left: 1060px;
-    top: 10px;
+    top: 2px;
 }
 
 #navbarNavAltMarkup > .navbar-nav > li > a > .fa{
@@ -2751,86 +2752,36 @@
 /******** MEDIA QUERY (MAX-WIDTH) [END] ***********/
 /*****************MEDIA QUERY NAVBAR (END)*******************/
 /*-------------------------------------(end)NAVBAR css ----------------------------------*/
-/*-----------------------------------(end)FreeIslandwide css -----------------------------*/
-/*-------------------------------------(start) title"LOGIN" ------------------------------*/
-.container_logintitle{
-    margin: 25px auto;
+
+/*----------------------------------(start) SHOPPING CART FONT ---------------------------------*/
+.container_shopcarttitle{
+    margin-top: 25px;
     position: relative;
     font-family: 'Montserrat', sans-serif;
 }
-/*-------------------------------------(end) title"LOGIN" --------------------------------*/
-/*------------------------------------(start) login Image --------------------------------*/
-.modal_login_1{
-    margin-bottom:100px;
-    width:95%;
-}
+/*-----------------------------------(end) SHOPPING CART FONT ----------------------------------*/
 
-.modal_login_1 > .row > .image_login > img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    padding: 0px;
-}
-/*--------------------------------------(end) login Image --------------------------------*/
-/*-------------------------------------(start) login Form --------------------------------*/
-.login_form{
-    margin-top: 130px;
-}
-
-#emaila_font,#emailb_font{
-    font-size: 11px;
-    position: relative;
+/*-------------------------------------(start) Checkout FORM -----------------------------------*/
+.cart_product_font, .cart_productprice_font, .cart_totalproductprice_font, .continue-shopping{
+    /* letter-spacing: 0.01em; */
     font-family: 'Montserrat', sans-serif;
 }
 
-#login_submit{
-    margin-top: 60px;
-    margin-bottom: 20px;
+.cartSmallScreenImage{
+    max-width: 30%;
 }
+/*---------------------------------------(end) Checkout FORM -----------------------------------*/
 
-#login_submit{
+/*-----------------------------------------(start)CART TOTAL -----------------------------------*/
+.price1{
+    /* letter-spacing: 0.01em; */
     font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
     font-weight: bold;
+    letter-spacing: 0.03em;
 }
-/*---------------------------------------(end) login Form --------------------------------*/
-/*------------------------------(start) if/else thymeleaf --------------------------------*/
-.invalid_login{
-    font-size: 14px;
-    position: relative;
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
-    color: red;
-    margin-top: 0px;
-}
+/*-------------------------------------------(end)CART TOTAL -----------------------------------*/
 
-.loggedOut{
-    font-size: 14px;
-    position: relative;
-    font-family: 'Montserrat', sans-serif;
-    text-align:center;
-    color:green;
-    margin-top: 0px;
-}
-/*-------------------------------(end) if/else thymeleaf --------------------------------*/
 
-/**************************** LOGIN FORM MEDIA QUERY [START] *****************************/
-@media screen and (max-width: 767px){
-    .login_form{
-        margin-top: 50px;
-    }
-
-    #emaila_font, #emailb_font{
-        font-size: 11px;
-        position: relative;
-        font-family: 'Montserrat', sans-serif;
-    }
-
-    #login_submit{
-        margin-top: 30px;
-    }
-}
-/****************************** LOGIN FORM MEDIA QUERY [END] *****************************/
 /*---------------------------------------(start) Footer-------------------------------------*/
 
 .logo1{                                             /* footer cake logo adjust width/height */
@@ -3005,7 +2956,8 @@ hr{                                /*WRITE TO US, LOCATE US, SOCIAL MEDIA (UNDER
     color: white;
     letter-spacing: 0.2em;
     font-family: 'Montserrat', sans-serif;
-    line-height: center;
+    /*line-height: center;*/
+    vertical-align: middle;
     position: relative;
     top: 9px;
 }
@@ -6026,6 +5978,7 @@ hr{                                /*WRITE TO US, LOCATE US, SOCIAL MEDIA (UNDER
         letter-spacing:0.1em;
     }
     /*--------------------(end) carousel css-----------------*/
+
     /*---------------------(start) Footer--------------------*/
     .logo1{                                             /* footer cake logo adjust width/height */
         width: 140px;  /*+2px*/
@@ -6123,3 +6076,9 @@ hr{                                /*WRITE TO US, LOCATE US, SOCIAL MEDIA (UNDER
 
 
 /*-------------------------------(end)Media queries for navbar-----------------------------------*/
+
+
+
+
+
+
