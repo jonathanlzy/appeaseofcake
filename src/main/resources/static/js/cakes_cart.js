@@ -99,7 +99,7 @@ if (storedCakesData !== null) {
     `
         document.getElementById("cart").innerHTML = output;
     }
-} else alert("Try our yummy cakes!");
+} else alert("Cart is empty.");
 // --------------------------------------------------------------
 // pass totalCost & gst to cakes_cart.html File, via localstorage
 

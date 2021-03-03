@@ -55,13 +55,36 @@
 <!----------------------------------------------------------(Start)FORM---------------------------------------------------->
 <div class="container-fluid bg-white py-2 my-5">
     <div id="cart"></div>
+    <br>
+    <br>
 
     <!------------------------------------------------------------(End)FORM---------------------------------------------------->
 
     <!-----------------------------------------------------(start)CART TOTAL--------------------------------------------------->
-    <div class="row mt-5">
-        <label class="col-sm-3 text-center control-label"><strong>Cart Total</strong></label>
-        <div class="col-md-5 offset-md-4 col-sm-7 offset-sm-2">
+    <!-----------------------------------------------------(start)CART TOTAL--------------------------------------------------->
+    <div class="row" >
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" style="font-family: 'Montserrat', sans-serif; padding-left: 100px;">
+            <div class="address-area">
+                <label class="text-center control-label" style="font-family: 'Montserrat', sans-serif; font-weight: bold;letter-spacing: 0.02em;">Delivery Information:</label>
+                <!-- <label class="address-label"><strong>Address : </strong></label> -->
+                <div class="address-field">
+                    <textarea rows="2" cols="47" placeholder="Enter address"  class="mb-2" style="font-size: 14px;"></textarea>
+                </div>
+                <!-- <label class="address-label"><strong>Postal Code : </strong></label> -->
+                <div class="address-field mb-3">
+                    <input type="text" placeholder="Enter postal code" id="price" style="font-size: 14px;" class="input-boxes" size="45"/>
+                </div>
+                <!-- <label class="address-label"><strong>Contact Number : </strong></label> -->
+                <div class="address-field">
+                    <input type="text" id="sku" placeholder="Enter handphone no." style="font-size: 14px;" class="input-boxes" size="45"/>
+                </div>
+                <label class="address-label mt-3" style="font-weight: bold;">Delivery Date : </label>
+                <div class="address-field">
+                    <input type="date" id="quantity" class="input-boxes" size="45"/>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
             <table class="table table-totals">
                 <tbody>
                 <tr>
@@ -84,10 +107,9 @@
             <table class="table">
                 <tbody>
                 <tr>
-<!--                    <a href="/checkout/${sessionStorage.getItem()}"-->
-
+                    <!--                    <a href="/checkout/${sessionStorage.getItem()}"-->
                     <td id="noMoneyNoHoney"></td>
-<!--                    <td class="text-center"><a href="/checkout/1000" class="checkout_btn btn btn-warning" id="noMoneyNoHoney">Checkout</a></td>-->
+                    <!--                    <td class="text-center"><a href="/checkout/1000" class="checkout_btn btn btn-warning" id="noMoneyNoHoney">Checkout</a></td>-->
                 </tr>
                 <tr>
                     <td class="text-center"><a href="/cakes" class="text-primary continue-shopping">Or Continue
@@ -98,6 +120,67 @@
         </div>
     </div>
 </div>
+<!--End of container div (FORM)-->
+<!-------------------------------------------------------(end)CART TOTAL--------------------------------------------------->
+<!--    <div class="row" style="font-family: 'Montserrat', sans-serif;">-->
+<!--        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" style="font-family: 'Montserrat', sans-serif; padding-left: 320px;">-->
+<!--            <div class="address-area">-->
+<!--                <label class="text-center control-label" style="font-family: 'Montserrat', sans-serif; font-weight: bold;letter-spacing: 0.02em;">Delivery Information:</label>-->
+<!--                &lt;!&ndash; <label class="address-label"><strong>Address : </strong></label> &ndash;&gt;-->
+<!--                <div class="address-field">-->
+<!--                    <textarea rows="2" cols="47" placeholder="Enter address"  class="mb-2" style="font-size: 14px;"></textarea>-->
+<!--                </div>-->
+<!--                &lt;!&ndash; <label class="address-label"><strong>Postal Code : </strong></label> &ndash;&gt;-->
+<!--                <div class="address-field mb-3">-->
+<!--                    <input type="text" placeholder="Enter postal code" id="price" style="font-size: 14px;" class="input-boxes" size="45"/>-->
+<!--                </div>-->
+<!--                &lt;!&ndash; <label class="address-label"><strong>Contact Number : </strong></label> &ndash;&gt;-->
+<!--                <div class="address-field">-->
+<!--                    <input type="text" id="sku" placeholder="Enter handphone no." style="font-size: 14px;" class="input-boxes" size="45"/>-->
+<!--                </div>-->
+<!--                <label class="address-label mt-3" style="font-weight: bold;">Delivery Date : </label>-->
+<!--                <div class="address-field">-->
+<!--                    <input type="date" id="quantity" class="input-boxes" size="45"/>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="col-6">-->
+<!--            <table class="table table-totals">-->
+<!--                <tbody>-->
+<!--                <tr>-->
+<!--                    <td class="text-left"><strong>Sub-Total:</strong></td>-->
+<!--                    <td class="price1 text-right"><div id="overallSubTotalCost"></div></td>-->
+<!--                    <td class="text-right"></td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td class="text-left"><strong>GST (Inclusive 7%):</strong></td>-->
+<!--                    <td class="price1 text-right" id="gstHere"></td>-->
+<!--                    <td class="text-right"></td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td class="text-left"><strong>Total:</strong></td>-->
+<!--                    <td class="price1 text-right"><div id="overallTotalCost"></div></td>-->
+<!--                    <td class="text-right"></td>-->
+<!--                </tr>-->
+<!--                </tbody>-->
+<!--            </table>-->
+<!--            <table class="table">-->
+<!--                <tbody>-->
+<!--                <tr>-->
+<!--&lt;!&ndash;                    <a href="/checkout/${sessionStorage.getItem()}"&ndash;&gt;-->
+
+<!--                    <td id="noMoneyNoHoney"></td>-->
+<!--&lt;!&ndash;                    <td class="text-center"><a href="/checkout/1000" class="checkout_btn btn btn-warning" id="noMoneyNoHoney">Checkout</a></td>&ndash;&gt;-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td class="text-center"><a href="/cakes" class="text-primary continue-shopping">Or Continue-->
+<!--                        Shopping</a></td>-->
+<!--                </tr>-->
+<!--                </tbody>-->
+<!--            </table>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
 <!--End of container div (FORM)-->
 <!-------------------------------------------------------(end)CART TOTAL--------------------------------------------------->
 

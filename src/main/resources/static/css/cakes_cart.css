@@ -2760,6 +2760,23 @@
     font-family: 'Montserrat', sans-serif;
 }
 /*-----------------------------------(end) SHOPPING CART FONT ----------------------------------*/
+/*.input-boxes {*/
+/*    display: inline-block;*/
+/*    float: right;*/
+/*}*/
+/*.address-field {*/
+/*    display: flex;*/
+/*    justify-content: left;*/
+/*    padding-left: 40px;*/
+/*}*/
+
+/*.address-label {*/
+/*    display: flex;*/
+/*    justify-content: left;*/
+/*    padding-left: 40px;*/
+/*}*/
+
+
 
 /*-------------------------------------(start) Checkout FORM -----------------------------------*/
 .cart_product_font, .cart_productprice_font, .cart_totalproductprice_font, .continue-shopping{
